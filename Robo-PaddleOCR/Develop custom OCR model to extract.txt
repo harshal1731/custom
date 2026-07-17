@@ -1,0 +1,83 @@
+Develop custom OCR model to extract information from multiple ROBO1040 forms. 
+The output accuracy should be above 90%
+The processing speed should be under 15 seconds for each form
+The solution should be dockerised and deployed on ACR 
+The API endpoints should take in PDF file as input and generate properly structured JSON response
+The API should have security headers and proper authorization to protect the API from unauthorized access
+
+I have analyzed your workspace directory, inspected the details of the Excel field-mappings, and ran a programmatic analysis of the sample PDFs.
+
+Below is a detailed breakdown of the project requirements, a critical discovery about the data files, a step-by-step starting guide, and the strategic cross-questions you should ask your manager and team.
+
+1. Workspace Folder & Document Analysis
+Directory Structure Overview
+01 - ROBO1040 - All Documents/
+01 - ROBO - Sample PDF Document - 10 Set/: Contains 10 sample PDFs for 5 form categories:
+01 - W2 Form
+02 - 1099 INT
+03 - 1099 DIV
+04 - Consolidated Brokerage Statement (Note: These vary significantly in size, e.g., document 1 is 9 pages, document 2 is 6 pages, document 3 is 30 pages)
+05 - 5498 SA
+02 - ROBO - OCR - Field Mapping/: Contains the target schema:
+All Forms Fields.xlsx: Defines the precise target fields, validation types (numeric, box check, alphanumeric), mandatory flags, and character limits for 20+ different IRS forms (including W2, 1099-INT, 1099-DIV, 1099-R, SSA-1099, 1099-B, 1099-G, 1099-S, 1099-NEC, 1099-MISC, Schedule K-1s, 5498s, 1098s, 1099-Q, 1095-A, etc.).
+Field Mapping-Capital Gain_Consolidated Brokerage Stmt_V1.0.xlsx: Defines fields and coordinates mapping for Brokerage Statements.
+IMPORTANT
+
+Critical Discovery (Scanned vs. Digital PDFs) I programmatically scanned the sample PDFs in your workspace. Most of the sample PDFs (e.g., all 1099s, W2s, and Brokerage Statements) are scanned images packaged as PDFs with NO extractable digital text.
+
+What this means: You cannot use a pure coordinate/layout parser (like pdfplumber or pdfminer alone) as the primary extraction engine. You will extract empty strings.
+The solution: The extraction pipeline must include an OCR engine (such as Tesseract, EasyOCR, or PaddleOCR) or a Visual Language Model (VLM) that reads images/scanned pixels to transcribe the text before extracting the structured fields.
+2. Deconstructing "Develop Our Own Model"
+Since your manager explicitly confirmed: "The expectation is to develop our own model rather than use the Azure Document Intelligence model," here is what that means in practice:
+
+You cannot train a custom layout/transformer model (like Donut or LayoutLMv3) from scratch. Training a deep learning document model from scratch requires hundreds of thousands of labeled pages, which you do not have.
+"Our own model" means self-hosting an open-source model/pipeline in your own container. Instead of calling cloud services (Azure Document Intelligence or OpenAI), you will build an inference engine packaged in a Docker container, deployed to Azure Container Registry (ACR), and running on your own Azure container infrastructure.
+Comparing Your Self-Hosted Options
+Criteria	Option A: Vision-Language Model (VLM)
+(Qwen2-VL-2B / Phi-3.5-Vision)	Option B: Document Transformer
+(Donut / LayoutLMv3)	Option C: Custom OCR + Bounding Rules
+(Tesseract/PaddleOCR + Regex/Coordinates)
+Inference Speed	Fast (~1-3s per page on CPU with quantization)	Medium (~4-10s per page on CPU)	Ultra Fast (<1s per page on CPU)
+Accuracy	High (>90%) out-of-the-box (zero-shot)	Low unless fine-tuned on thousands of pages	High on standardized forms; Low on variable layouts (e.g., Brokerage statements)
+Data Requirements	None (zero-shot prompting/few-shot samples)	High (requires 500+ annotated samples per form)	Medium (requires writing extraction rules for each form layout)
+Complexity	Low-Medium (prompting + JSON schema enforcement)	High (requires training infrastructure & data labeling)	High (fragile layout coordinate mapping)
+Recommendation: Go with Option A (Quantized Qwen2-VL-2B-Instruct running in-container) for variable/complex documents (like Brokerage Statements), combined with Option C for highly standardized single-page documents (if clean text is extractable).
+
+3. Step-by-Step Project Start Guide
+To transition from requirement gathering to development, follow this sequence:
+
+Mermaid diagram
+Step 1: Project Structuring & Setup
+Create a Python-based project structure with directories for api/, core/ (model loading and extraction), models/ (model weights/ONNX files), and tests/.
+Step 2: Document Classification
+Write a lightweight classifier (using simple layout keywords, text density, or a small CNN) to determine the document type of an uploaded PDF (e.g., W2 vs. 1099-INT vs. Brokerage Statement) so the pipeline knows which target schema to apply.
+Step 3: Extraction Engine
+Implement a pipeline that:
+Converts PDF pages into images (using pdf2image).
+Runs OCR (e.g., Tesseract or PaddleOCR) or passes the images directly to a local, quantized VLM (using transformers or onnxruntime).
+Parses the text/VLM output and structures it into the exact JSON format specified by All Forms Fields.xlsx.
+Step 4: API & Security Wrappers
+Implement a FastAPI app with a /extract endpoint taking a PDF file.
+Add middleware for security headers (CORS, HSTS) and an X-API-Key or OAuth token authorization check.
+Step 5: Dockerization
+Write a Dockerfile that packages the application, installs systemic dependencies (like tesseract-ocr or poppler-utils for PDF rendering), copies the local quantized model files, and exposes port 8000.
+Step 6: CI/CD & Deploy
+Test the Docker build locally to verify the <15 seconds speed requirement, then push to Azure Container Registry (ACR).
+4. Strategic Cross-Questions for Your Manager & Team
+To ensure you design the architecture correctly and protect your project timeline, ask your manager and technical lead these questions:
+
+Scope & Data Questions
+"The Excel sheet defines over 20 different tax form schemas, but we only have sample documents for 5 types (W-2, 1099-INT, 1099-DIV, Brokerage Statement, 5498-SA). Do we need to support all 20+ form types for the initial release, and if so, can we get at least 10 sample documents for the remaining forms?"
+Why: You cannot write extraction logic or verify accuracy for forms you have no samples of.
+"Are the forms expected to be standard, official IRS layouts (which have fixed positions), or will we receive customized layouts (e.g., custom employer W-2s, or Consolidated Brokerage Statements from various banks like Schwab, Fidelity, Goldman Sachs, which look completely different)?"
+Why: If layouts vary dynamically, coordinate-based templates will fail, and a vision-language model (VLM) is mandatory.
+Infrastructure & Compute Questions
+"Where will the Docker container be hosted in Azure (e.g., Azure Container Apps, AKS, or Azure App Service), and will the container instances have access to GPUs, or must the models run strictly on CPU?"
+Why: Large neural network models run slowly on CPU. If you only have CPU resources, you must use heavily quantized models (like ONNX/GGUF) to stay under the 15-second limit.
+"Will input PDFs contain only a single form per file, or will we receive compiled 'tax packs' containing multiple forms in a single PDF (e.g., a W-2, followed by two 1099s)? If the latter, do we need to split and classify pages before processing them?"
+Why: Processing a multi-document PDF requires an extra document splitting and routing layer.
+Evaluation & Security Questions
+"How will the '90% output accuracy' requirement be calculated? Is it based on field-level exact matches, character-level accuracy (Levenshtein distance), or does it prioritize key financial numbers (like wages and SSN) over non-mandatory text fields?"
+Why: Defining the test metric early is crucial to building an evaluation dataset.
+"For API authorization, should we implement a static API Key validation (e.g., X-API-Key header), or should the container integrate with an Azure Active Directory (Microsoft Entra ID) OAuth flow?"
+Why: This determines the security middleware design.

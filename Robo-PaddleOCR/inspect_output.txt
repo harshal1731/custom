@@ -1,0 +1,289 @@
+
+=== Inspecting 01 - ROBO1040 - All Documents/02 - ROBO - OCR - Field Mapping/All Forms Fields.xlsx ===
+Sheet names: ['Index', 'W2', '1099-INT', '1099-DIV', '1099-R', 'SSA-1099', 'Capital Gain_1099-B', '1099-G', '1099-S', '1099-NEC', '1099-MISC', 'Schedule K-1 (1065)', 'Sheet1', 'Schedule K-1 (1120-s)', 'Schedule K-1 (1041)', 'W-2G', '5498', '1098-E', '1098-Morgage Statement', '1098-T', '1099-Q', '1095-A', '5498-SA', '1099-SA']
+
+Sheet: Index
+Cleaned Shape: (23, 7)
+Columns: ['Index', 'Unnamed: 2', 'Unnamed: 4', 'Unnamed: 6', 'Unnamed: 8', 'Unnamed: 16360', 'Unnamed: 16362']
+First 5 rows:
+   Index Unnamed: 2 Unnamed: 4 Unnamed: 6 Unnamed: 8 Unnamed: 16360  Unnamed: 16362
+0      1   Form W-2        NaN   Form W-2        NaN         May be      Check box 
+1      2   1099-Int        NaN   1099-Int        NaN            Yes  Large text box
+2      3   1099-Div        NaN   1099-Div        NaN            NaN   Radio button 
+3      4     1099-R        NaN  1099-MISC        NaN            NaN             NaN
+4      5   SSA-1099        NaN   1099-NEC        NaN            NaN             NaN
+
+Sheet: W2
+Cleaned Shape: (30, 13)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                              Unnamed: 1   Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                                                                                                                                 Unnamed: 7 Unnamed: 8 Unnamed: 11 Unnamed: 12 Unnamed: 16381  Unnamed: 16383
+0          #            Filed description / Question  Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                                                                                                                    Comment        NaN         NaT         NaN         May be      Check box 
+1        NaN                                    Year      Numeric          Yes        Number                     4        NaN                                                                                                                                 If Tax Year, Employer EIN and Employee SSN same, then do not enter same W2        NaN         NaT         NaN            NaN             NaN
+2        NaN       Employee’s social security number    Text box           Yes        Number                    11        NaN                                                                                                                                            Including Hyphen (-) it should be 11 Digits. Format 111-11-1111        NaN         NaT         NaN            Yes  Large text box
+3        NaN    Employer identification number (EIN)    Text box           Yes        Number                    10        NaN                                                                                                                                             Including Hyphen (-) it should be 10 Digits. Format 11-1111111        NaN         NaT         NaN            NaN   Radio button 
+4        NaN  Employer’s name, address, and ZIP code    Text box           Yes  AlphaNumeric    50 Plus characters        NaN  Name and address boxes should be separate and we need auto flow of State ,city and County if we enter the Zipcode and adddress should be separate boxes like (Street Add,City, County,State and Zipcode)         NaN         NaT         NaN            NaN       Text box 
+
+Sheet: 1099-INT
+Cleaned Shape: (28, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                             Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                          Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                           Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                             Comment         May be      Check box 
+1        NaN                                                                                                                   Year         Numeric          Yes        Number                     4        NaN  If Tax year, PAYER’S TIN, RECIPIENT’S TIN and Account Number same, then do not enter same 1099-INT            NaN             NaN
+2        NaN  PAYER’S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no.  Large text box           No  AlphaNumeric    50 Plus characters       done                             Only Name is required,payers address is not a mandatory field for this              No       Drop down
+3        NaN                                                                                                            Payer's TIN       Text box           Yes        Number                    10        NaN                                      Including Hyphen (-) it should be 10 Digits. Format 11-1111111            Yes  Large text box
+4        NaN                                                                                                        Recipient's TIN       Text box           Yes        Number                    11        NaN                                                                Need to auto flow from Tax payer Tab            NaN   Radio button 
+
+Sheet: 1099-DIV
+Cleaned Shape: (32, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                             Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                           Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                           Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                              Comment         May be      Check box 
+1        NaN                                                                                                                   Year         Numeric          Yes        Number                     4        NaN  If Tax year, PAYER’S TIN, RECIPIENT’S TIN and Account Number  same, then do not enter same 1099-DIV             No       Drop down
+2        NaN  PAYER’S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no.  Large text box           No  AlphaNumeric    50 Plus characters        ask                              Only Name is required,payers address is not a mandatory field for this             Yes  Large text box
+3        NaN                                                                                                            Payer's TIN       Text box           Yes        Number                    10        NaN                                       Including Hyphen (-) it should be 10 Digits. Format 11-1111111            NaN   Radio button 
+4        NaN                                                                                                        Recipient's TIN       Text box           Yes        Number                    11        NaN                                                                 Need to auto flow from Tax payer Tab            NaN       Text box 
+
+Sheet: 1099-R
+Cleaned Shape: (32, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                             Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                                                                                                                                 Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                           Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                                                                                                                    Comment         May be      Check box 
+1        NaN                                                                                                                   Year         Numeric          Yes        Number                     4        NaN                                                                                                          If Tax Year, PAYER’S TIN, RECIPIENT’S TIN and Account Number  same, then do not enter same 1099-R            NaN             NaN
+2        NaN  PAYER’S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no.  Large text box          Yes  AlphaNumeric    50 Plus characters       done  Name and address boxes should be separate and we need auto flow of State ,city and County if we enter the Zipcode and adddress should be separate boxes like (Street Add,City, County,State and Zipcode)              No       Drop down
+3        NaN                                                                                                            PAYER’S TIN       Text box           Yes        Number                    10        NaN                                                                                                                                             Including Hyphen (-) it should be 10 Digits. Format 11-1111111            NaN             NaN
+4        NaN                                                                                                        RECIPIENT’S TIN       Text box           Yes        Number                    11       done                                                                                                                                                                       Need to auto flow from Tax payer Tab            Yes  Large text box
+
+Sheet: SSA-1099
+Cleaned Shape: (11, 9)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                            Unnamed: 1   Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5                                                                                                                   Unnamed: 6 Unnamed: 16381  Unnamed: 16383
+0          #          Filed description / Question  Field type   Mandatory?    Field type   Max Character Length                                                                                                                      Comment         May be      Check box 
+1        NaN                                  Year      Numeric          Yes        Number                     4  If Tax Year, Beneficiary's Social Security number and Descprition of amount in Box 4  same, then do not enter same SSA-1099            NaN             NaN
+2          1                                  Name    Text box           Yes  AlphaNumeric          10 Plus(ask)                                                                                                                          NaN             No       Drop down
+3          2  Beneficiary’s Social Security Number    Text box           Yes        Number                    11                                                              Including Hyphen (-) it should be 11 Digits. Format 111-11-1111            Yes  Large text box
+4          3                 Benefits Paid in 2022    Text box           Yes      Currency                    10                                                                                              Including Comma (,) and Dot (.)            NaN   Radio button 
+
+Sheet: Capital Gain_1099-B
+Cleaned Shape: (35, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                             Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                              Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                           Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                 Comment         May be      Check box 
+1        NaN                                                                                                                   Year         Numeric          Yes        Number                     4        NaN  If Tax Year, PAYER’S TIN, RECIPIENT’S TIN and Account Number same, then do not enter same Capital Gain             No       Drop down
+2        NaN  PAYER’S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no.  Large text box           No  AlphaNumeric    50 Plus characters        ask                                 Only Name is required,payers address is not a mandatory field for this             Yes  Large text box
+3        NaN                                                                                                            PAYER’S TIN       Text box           Yes        Number                    10        NaN                                          Including Hyphen (-) it should be 10 Digits. Format 11-1111111            NaN   Radio button 
+4        NaN                                                                                                        RECIPIENT’S TIN       Text box           Yes        Number                    11        ask                Including Hyphen (-) it should be 11 Digits. Format 111-11-1111  it should be auto flow.            NaN       Text box 
+
+Sheet: 1099-G
+Cleaned Shape: (22, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                         Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                                                                                                                                 Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #       Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                                                                                                                    Comment         May be      Check box 
+1        NaN                               Year         Numeric          Yes        Number                     4        NaN                                                                                                           If Tax Year, PAYER’S TIN, RECIPIENT’S TIN and Account Number same, then do not enter same 1099-G            NaN             NaN
+2        NaN  Payer's Name and complete address  Large text box           No  AlphaNumeric    50 Plus characters        ask  Name and address boxes should be separate and we need auto flow of State ,city and County if we enter the Zipcode and adddress should be separate boxes like (Street Add,City, County,State and Zipcode)              No       Drop down
+3        NaN                        Payer's TIN       Text box           Yes        Number                    10        NaN                                                                                                     Including Hyphen (-) it should be 10 Digits. Formate 11-1111111  Need to be in EIN format (12-3456789)            Yes  Large text box
+4        NaN                    Recipient's TIN       Text box           Yes        Number                    11        ask                                                                                                    Including Hyphen (-) it should be 11 Digits. Formate 111-11-1111 Need to be in SSN format (123-45-6789)            NaN   Radio button 
+
+Sheet: 1099-S
+Cleaned Shape: (15, 9)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                                 Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5                                                                                                                                                            Unnamed: 6 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                               Filed description / Question     Field type   Mandatory?    Field type   Max Character Length                                                                                                                                                               Comment         May be      Check box 
+1        NaN                                                                                                                       Year         Numeric          Yes        Number                     4                                                                                     If Tax Year, FILER’S TIN and TRANSFEROR’S TIN same, then do not enter same 1099-S            NaN             NaN
+2        NaN  FILER’S name, street address, city or town, state or province, country,\nZIP or foreign postal code, and telephone number  Large text box          Yes  AlphaNumeric    50 Plus characters  Need to auto flow from Tax payer Tab Auto flow is working but We need employee's adddress should be separate boxes like (Street Add,City, County,State and Zipcode)              No       Drop down
+3        NaN                                                                                                                FILER’S TIN       Text box           Yes        Number                    11                                                                                                      Including Hyphen (-) it should be 11 Digits. Format 111-11-1111             Yes  Large text box
+4        NaN                                                                                                           TRANSFEROR’S TIN       Text box           Yes        Number                    10                                                                 Including Hyphen (-) it should be 10 Digits. Format 11-1111111   Need to auto flow from Tax payer Tab            NaN   Radio button 
+
+Sheet: 1099-NEC
+Cleaned Shape: (17, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                             Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                                                                                                                        Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                           Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                                                                                                           Comment         May be      Check box 
+1        NaN                                                                                                                   Year         Numeric          Yes        Number                     4        NaN                                                                                                If Tax Year, PAYER’S TIN, RECIPIENT’S TIN and Account Number same, then do not enter same 1099-NEC             No       Drop down
+2        NaN  PAYER’S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no.  Large text box          Yes  AlphaNumeric               50 Plus        NaN  Address boxes should be separate and we need auto flow of State ,city and County if we enter the Zipcode and adddress should be separate boxes like (Street Add,City, County,State and Zipcode)             Yes  Large text box
+3        NaN                                                                                                      For calendar year       Text box            No        Number                     4        NaN                                                                                                                                                                                               NaN            NaN   Radio button 
+4        NaN                                                                                                            PAYER’S TIN       Text box           Yes        Number                    10        NaN                                                                                                                                    Including Hyphen (-) it should be 10 Digits. Format 11-1111111            NaN       Text box 
+
+Sheet: 1099-MISC
+Cleaned Shape: (29, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                         Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                            Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #       Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                               Comment         May be      Check box 
+1        NaN                               Year         Numeric          Yes        Number                     4        NaN   If Tax Year, PAYER’S TIN, RECIPIENT’S TIN and Account Number same, then do not enter same 1099-MISC            NaN             NaN
+2        NaN  Payer's Name and complete address  Large text box          Yes  AlphaNumeric               50 Plus        NaN                                                                                                   NaN             No       Drop down
+3        NaN                        Payer's TIN       Text box           Yes        Number                    10        NaN                                      Including Hyphen (-) it should be 10 Digits. Format 11-1111111              Yes  Large text box
+4        NaN                    Recipient's TIN       Text box           Yes        Number                    11        NaN  Including Hyphen (-) it should be 11 Digits. Format 111-11-1111 Need to auto flow from Tax payer Tab            NaN   Radio button 
+
+Sheet: Schedule K-1 (1065)
+Cleaned Shape: (66, 11)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 9', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                              Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                        Unnamed: 7 Unnamed: 9 Unnamed: 16381 Unnamed: 16383
+0          #                            Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                           Comment        NaN         May be     Check box 
+1        NaN                                                    Year         Numeric          Yes        Number                     4        NaN  If  Tax Year, Partnership’s EIN and Partner’s SSN/ TIN same, then do not enter same Schedule K-1        NaN            NaN            NaN
+2        NaN            Partnership’s employer identification number       Text box           Yes        Number                    10        NaN                                    Including Hyphen (-) it should be 10 Digits. Format 11-1111111        NaN            NaN            NaN
+3        NaN  Partnership’s name, address, city, state, and ZIP code  Large text box          Yes  AlphaNumeric               50 Plus        NaN                                                                               Including Coma (,)         NaN            NaN            NaN
+4        NaN              IRS center where partnership filed return:       Text box            No  AlphaNumeric                5 Plus        ask                                                                               Including Coma (,)         NaN             No      Drop down
+
+Sheet: Sheet1
+Cleaned Shape: (0, 0)
+Columns: []
+First 5 rows:
+Empty DataFrame
+Columns: []
+Index: []
+
+Sheet: Schedule K-1 (1120-s)
+Cleaned Shape: (39, 9)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                              Unnamed: 1   Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5                                                                                                     Unnamed: 6 Unnamed: 16381  Unnamed: 16383
+0          #                            Filed description / Question  Field type   Mandatory?    Field type   Max Character Length                                                                                                        Comment         May be      Check box 
+1        NaN                                                    Year      Numeric          Yes        Number                     4  If Tax Tear, Corporation’s EIN and Shareholder’s identifying number same, then do not enter same Schedule K-1             No       Drop down
+2        NaN            Corporation’s employer identification number    Text box           Yes        Number                    10                                                 Including Hyphen (-) it should be 10 Digits. Format 11-1111111            Yes  Large text box
+3        NaN  Corporation’s name, address, city, state, and ZIP code    Text box           Yes  AlphaNumeric               50 Plus                                                                                            Including Coma (,)             NaN   Radio button 
+4        NaN              IRS center where Corporation filed return:    Text box        May be  AlphaNumeric                5 Plus                                                                                            Including Coma (,)             NaN       Text box 
+
+Sheet: Schedule K-1 (1041)
+Cleaned Shape: (28, 9)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                            Unnamed: 1   Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5                                                                                                           Unnamed: 6 Unnamed: 16381  Unnamed: 16383
+0          #                          Filed description / Question  Field type   Mandatory?    Field type   Max Character Length                                                                                                              Comment         May be      Check box 
+1        NaN                                                  Year      Numeric          Yes        Number                     4  If Tax Year, Estate’s or trust’s EIN and Beneficiary’s identifying number same, then do not enter same Schedule K-1            NaN             NaN
+2        NaN    Estate’s or trust’s employer identification number    Text box           Yes        Number                    10                                                       Including Hyphen (-) it should be 10 Digits. Format 11-1111111             No       Drop down
+3        NaN                              Estate’s or trust’s name    Text box           Yes  AlphaNumeric               10 plus                                                                                                                  NaN            Yes  Large text box
+4        NaN  Fiduciary’s name, address, city, state, and ZIP code    Text box           Yes  AlphaNumeric               50 plus                                                                                                                  NaN            NaN   Radio button 
+
+Sheet: W-2G
+Cleaned Shape: (26, 9)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                                        Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5                                                                                                                     Unnamed: 6 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                                      Filed description / Question     Field type   Mandatory?    Field type   Max Character Length                                                                                                                        Comment         May be      Check box 
+1        NaN                                                                                                                              Year         Numeric          Yes        Number                     4  If Tax year, PAYER’S federal identification number and  Winner’s taxpayer identification no same, then do not enter same W-2G            NaN             NaN
+2        NaN  PAYER’S name, street address, city or town, province or state, country,\nand ZIP or foreign postal code (Payer's name is enough)  Large text box           No  AlphaNumeric               50 plus                                                                                                                            NaN            Yes  Large text box
+3        NaN                                                                                             PAYER’S federal identification number       Text box           Yes        Number                    10                                                                 Including Hyphen (-) it should be 10 Digits. Format 11-1111111            NaN   Radio button 
+4        NaN                                                                                                          PAYER’S telephone number       Text box            No        Number                    10                                                                                                                            NaN            NaN       Text box 
+
+Sheet: 5498
+Cleaned Shape: (29, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                            Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                                      Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                          Field description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                         Comment         May be      Check box 
+1        NaN                                                                                                                  Year         Numeric          Yes        Number                     4        NaN  If Tax Year, TRUSTEE’S or ISSUER’S TIN, PARTICIPANT’S TIN and Account Number same, then do not enter same 5498            NaN             NaN
+2        NaN  TRUSTEE’S or ISSUER’S name, street address, city or town, state or province, country, and ZIP or foreign postal code  Large text box           No  AlphaNumeric               50 plus        NaN                                                                                             Name required only.             No       Drop down
+3        NaN                                                                                             TRUSTEE’S or ISSUER’S TIN       Text box            No        Number                    10        NaN                                                  Including Hyphen (-) it should be 10 Digits. Format 11-1111111            Yes  Large text box
+4        NaN                                                                                                     PARTICIPANT’S TIN       Text box           Yes        Number                    11        ask                                                 Including Hyphen (-) it should be 11 Digits. Format 111-11-1111            NaN   Radio button 
+
+Sheet: 1098-E
+Cleaned Shape: (11, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                                              Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5                Unnamed: 6                                                                                                                                                                                                          Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                                            Filed description / Question     Field type   Mandatory?    Field type   Max Character Length                       NaN                                                                                                                                                                                                             Comment         May be      Check box 
+1        NaN                                                                                                                                    Year         Numeric          Yes        Number                     4                       NaN                                                                                                                    If Tax Year, PAYER’S TIN, RECIPIENT’S TIN and Account Number same, then do not enter same 1098-E            NaN             NaN
+2        NaN  RECIPIENT’S/LENDER’S name, street address, city or town, state or\nprovince, country, ZIP or foreign postal code, and telephone number  Large text box           No  AlphaNumeric               50 plus                       NaN                                                                                                                                                                                                  Only name required             No       Drop down
+3        NaN                                                                                                                         RECIPIENT’S TIN       Text box           Yes        Number                    10    EIN Format 2-7 numbers                                                                                                    Including Hyphen (-) it should be 11 Digits. Format 111-11-1111  here 10 digits format should be EIN 11-1111111             Yes  Large text box
+4        NaN                                                                                                                          BORROWER’S TIN       Text box           Yes        Number                    11  SSN format 3-2-4 numbers  Including Hyphen (-) it should be 10 Digits. Format 11-1111111 Based on the dropdown which we selected it should auto flow from taxpayer tab. Ex:taxpayer/spouse.  here 11 digits format should be SSN 111-11-1111            NaN   Radio button 
+
+Sheet: 1098-Morgage Statement
+Cleaned Shape: (20, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                                           Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                                                                                                                                            Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                                         Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                                                                                                                               Comment         May be      Check box 
+1        NaN                                                                                                                                 Year         Numeric          Yes        Number                     4        NaN                                                                                                                        If Tax year, PAYER’S TIN, RECIPIENT’S TIN and Account Number same, then do not enter same 1098            NaN             NaN
+2        NaN  RECIPIENT’S/LENDER’S name, street address, city or town, state or\nprovince, country, ZIP or foreign postal code, and telephone no.  Large text box          Yes  AlphaNumeric               50 Plus        NaN                                                                                                                                                           on tax portal you mentioned Borrower's/Lender's change that             No       Drop down
+3        NaN                                                                                                             RECIPIENT’S/LENDER’S TIN       Text box           Yes        Number                    10       done                                                                                                       Including Hyphen (-) it should be 11 Digits. Format 111-11-1111 here 10 digits format should be EIN 11-1111111             Yes  Large text box
+4        NaN                                                                                                               PAYER’S/BORROWER’S TIN       Text box           Yes        Number                    11       done  Including Hyphen (-) it should be 10 Digits. Format 11-1111111   Based on the dropdown which we selected it should auto flow from taxpayer tab. Ex:taxpayer/spouse.  here 11 digits format should be SSN 111-11-1111            NaN       Text box 
+
+Sheet: 1098-T
+Cleaned Shape: (19, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                         Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                             Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #       Filed description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                Comment         May be      Check box 
+1        NaN                               Year         Numeric          Yes        Number                     4        NaN  If Tax Year, FILER’S employer identification no and STUDENT’S TIN same, then do not enter same 1098-T            NaN             NaN
+2        NaN  Filer's Name and complete address  Large text box          Yes  AlphaNumeric               50 Plus        NaN                                                                                                    NaN             No       Drop down
+3        NaN                       Filer's  EIN       Text box           Yes        Number                    10        NaN                                         Including Hyphen (-) it should be 10 Digits. Format 11-1111111            Yes  Large text box
+4        NaN                      Student's TIN       Text box           Yes        Number                    11        ask                                        Including Hyphen (-) it should be 11 Digits. Format 111-11-1111            NaN   Radio button 
+
+Sheet: 1099-Q
+Cleaned Shape: (15, 9)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                                        Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5                                                                                        Unnamed: 6 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                                      Filed description / Question     Field type   Mandatory?    Field type   Max Character Length                                                                                           Comment         May be      Check box 
+1        NaN                                                                                                                              Year         Numeric          Yes        Number                     4  If Tax Year, PAYER’S TIN, RECIPIENT’S TIN and Account Number same, then do not enter same 1099-Q             No       Drop down
+2        NaN  PAYER’S/TRUSTEE’S name, street address, city or town, state or province,\ncountry, ZIP or foreign postal code, and telephone no.  Large text box          Yes  AlphaNumeric               50 Plus                                                                                               NaN            Yes  Large text box
+3        NaN                                                                                                             PAYER’S/TRUSTEE’S TIN       Text box           Yes        Number                    10                                    Including Hyphen (-) it should be 10 Digits. Format 11-1111111            NaN   Radio button 
+4        NaN                                                                                                                   RECIPIENT’S TIN       Text box           Yes        Number                    11                                   Including Hyphen (-) it should be 11 Digits. Format 111-11-1111            NaN       Text box 
+
+Sheet: 1095-A
+Cleaned Shape: (29, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 20', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                          Unnamed: 1   Unnamed: 2   Unnamed: 3   Unnamed: 4            Unnamed: 5                                                                                                                                                           Unnamed: 6 Unnamed: 20 Unnamed: 16381  Unnamed: 16383
+0          #        Filed description / Question  Field type   Mandatory?   Field type   Max Character Length                                                                                                                                                              Comment         NaN         May be      Check box 
+1        NaN                                Year      Numeric          Yes       Number                     4  If Tax Year,Marketplace identifier, Marketplace-assigned policy number,Policy issuer’s name,Recipient’s name andRecipient’s SSN same, then do not enter same 1095-A         NaN            NaN             NaN
+2        NaN       PART-I Receipient Information          NaN          NaN          NaN                   NaN                                                                                                                                                                  NaN         NaN            NaN             NaN
+3          1               Markeplace identifier    Text box           Yes       Number               10 Plus                                                                                                                                                 Including Hyphen (-)         NaN             No       Drop down
+4          2  Marketplace-assigned policy number      Numeric          Yes       Number               10 Plus                                                                                                                                                                  NaN         NaN            Yes  Large text box
+
+Sheet: 5498-SA
+Cleaned Shape: (15, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 16381', 'Unnamed: 16383']
+First 5 rows:
+  Unnamed: 0                                                                                                            Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5 Unnamed: 6                                                                                                                                                           Unnamed: 7 Unnamed: 16381  Unnamed: 16383
+0          #                                                                                          Field description / Question     Field type   Mandatory?    Field type   Max Character Length        NaN                                                                                                                                                              Comment         May be      Check box 
+1        NaN                                                                                                                  Year         Numeric          Yes        Number                     4        NaN                                                       If Tax Year, TRUSTEE’S or ISSUER’S TIN, PARTICIPANT’S TIN and Account Number same, then do not enter same 5498            NaN             NaN
+2        NaN  TRUSTEE’S or ISSUER’S name, street address, city or town, state or province, country, and ZIP or foreign postal code  Large text box          Yes  AlphaNumeric               50 plus    working                                                                                                                                                  Name only required.             No       Drop down
+3        NaN                                                                                             TRUSTEE’S or ISSUER’S TIN         Numeric       May be        Number                    10        NaN                                                                                                       Including Hyphen (-) it should be 10 Digits. Format 11-1111111            Yes  Large text box
+4        NaN                                                                                                     PARTICIPANT’S TIN         Numeric          Yes        Number                    11        ask  Including Hyphen (-) it should be 11 Digits. Format 111-11-1111  Based on the dropdown which we selected it should auto flow from taxpayer tab. Ex:taxpayer/spouse.            NaN   Radio button 
+
+Sheet: 1099-SA
+Cleaned Shape: (14, 7)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 7']
+First 5 rows:
+  Unnamed: 0                                                                                                            Unnamed: 1      Unnamed: 2   Unnamed: 3    Unnamed: 4            Unnamed: 5                                                                                                                                                           Unnamed: 7
+0          #                                                                                          Field description / Question     Field type   Mandatory?    Field type   Max Character Length                                                                                                                                                              Comment
+1        NaN                                                                                                                  Year         Numeric          Yes        Number                     4                                                    If Tax Year, TRUSTEE’S or ISSUER’S TIN, PARTICIPANT’S TIN and Account Number same, then do not enter same 1099-SA
+2        NaN  TRUSTEE’S or ISSUER’S name, street address, city or town, state or province, country, and ZIP or foreign postal code  Large text box          Yes  AlphaNumeric               50 plus                                                                                                                                                  Name only required.
+3        NaN                                                                                             TRUSTEE’S or ISSUER’S TIN         Numeric          Yes        Number                    10                                                                                                       Including Hyphen (-) it should be 10 Digits. Format 11-1111111
+4        NaN                                                                                                      RECIPIENT'S name         Numeric          Yes        Number                    11  Including Hyphen (-) it should be 11 Digits. Format 111-11-1111  Based on the dropdown which we selected it should auto flow from taxpayer tab. Ex:taxpayer/spouse.
+
+=== Inspecting 01 - ROBO1040 - All Documents/02 - ROBO - OCR - Field Mapping/Field Mapping-Capital Gain_Consolidated Brokerage Stmt_V1.0.xlsx ===
+Sheet names: ['Capital Gain_1099-B', 'Consolidated Brokerage Statemen']
+
+Sheet: Capital Gain_1099-B
+Cleaned Shape: (27, 4)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3']
+First 5 rows:
+  Unnamed: 0       Unnamed: 1       Unnamed: 2                      Unnamed: 3
+0      Sr.No       ROBO Field              NaN                             NaN
+1          1    PAYER’s name*    PAYER’s name*  GOLDMAN SACHS PRIVATED LIMITED
+2          2  PAYER’s Address  PAYER’s Address            210 CALIFORNIA PLAZA
+3          3    Payer ZipCode    Payer ZipCode                           10006
+4          4       Payer City       Payer City                      CALIFORNIA
+
+Sheet: Consolidated Brokerage Statemen
+Cleaned Shape: (81, 6)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5']
+First 5 rows:
+  Unnamed: 0        Unnamed: 1     Unnamed: 2 Unnamed: 3 Unnamed: 4 Unnamed: 5
+0      Sr.No           Section     ROBO Field        NaN        NaN        NaN
+1          1  Taxpayer Details   Payer Name *        NaN        NaN        NaN
+2          2               NaN  Payer Address        NaN        NaN        NaN
+3          3               NaN  Payer ZipCode        NaN        NaN        NaN
+4          4               NaN     Payer City        NaN        NaN        NaN

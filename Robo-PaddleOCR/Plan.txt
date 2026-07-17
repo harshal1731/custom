@@ -1,0 +1,127 @@
+Implementation Plan - ROBO1040 Custom OCR Extraction Service
+This implementation plan outlines the architecture, code changes, and verification plan for developing a custom, self-hosted OCR extraction model and FastAPI microservice for the ROBO1040 tax documents.
+
+User Review Required
+IMPORTANT
+
+Scanned vs. Digital PDFs Our analysis of the sample PDFs revealed that many documents are scanned/vectorized images with zero directly extractable text. To handle this:
+
+The system will use a hybrid approach: Direct PDF Text Extraction (fastest and 100% accurate for digital PDFs), falling back to OCR Page Rendering & OCR Text Detection/Recognition (using PyMuPDF for rendering and PaddleOCR/Tesseract for recognition) when digital text is missing.
+We will deploy PaddleOCR/Tesseract inside the Docker container to ensure OCR is self-hosted and offline.
+WARNING
+
+Validation and Matching Schemas The spreadsheet All Forms Fields.xlsx outlines schemas for over 20 different forms, but we only have sample documents for 5 types (W-2, 1099-INT, 1099-DIV, Brokerage Statement, 5498-SA).
+
+The initial codebase will implement fully working parsers for the 5 forms with sample data.
+We will write a modular parsing framework so that the remaining 15+ form types can be added rapidly once sample documents are made available.
+Open Questions
+None at this time. Clarifying questions regarding PDF structures and OCR fallbacks have been resolved by checking the workspace samples.
+
+Proposed Changes
+We will create a structured Python project under the root workspace directory d:\Harshal Projects\Robo-CustomModel-OCR.
+
+
+d:\Harshal Projects\Robo-CustomModel-OCR/
+├── Dockerfile                   # [NEW] Multi-stage slim Docker image with Poppler/OCR dependencies
+├── requirements.txt             # [NEW] List of Python dependencies (FastAPI, PyMuPDF, PaddleOCR, etc.)
+├── main.py                      # [NEW] FastAPI web server entrypoint with API Key check & security headers
+├── core/                        # [NEW] Core business logic package
+│   ├── __init__.py
+│   ├── auth.py                  # API Key security middleware and headers
+│   ├── classifier.py            # Document type classifier (W2, 1099-INT, etc.)
+│   ├── ocr_engine.py            # Text extraction engine (Direct extraction + PyMuPDF + PaddleOCR)
+│   └── parser.py                # Schema-based field extractors using layout & regex patterns
+├── schemas/                     # [NEW] Pydantic models for validation and response formatting
+│   ├── __init__.py
+│   ├── response.py              # Output JSON structures for extraction
+│   └── tax_fields.py            # Individual form field schemas (W-2, 1099s, etc.)
+└── tests/                       # [NEW] Unit and integration tests
+    ├── __init__.py
+    ├── test_api.py              # Test server endpoints and API key validation
+    └── test_extraction.py       # Test accuracy of extraction logic on sample PDFs
+Infrastructure & Package Configuration
+[NEW] 
+Dockerfile
+Create a Dockerfile based on python:3.11-slim that:
+
+Installs system dependencies: poppler-utils (needed by pdf2image/PyMuPDF for PDF page rendering) and system libraries for PaddlePaddle/Tesseract.
+Installs Python packages from requirements.txt.
+Copies application code and exposes port 8000.
+Runs Uvicorn: uvicorn main:app --host 0.0.0.0 --port 8000.
+[NEW] 
+requirements.txt
+Define dependencies:
+
+fastapi and uvicorn[standard]
+python-multipart
+pydantic and pydantic-settings
+PyMuPDF (fitz)
+pdf2image
+paddleocr (for robust OCR fallback)
+paddlepaddle
+openpyxl and pandas (for mapping schema inspection/loading)
+pytest and httpx (for testing)
+Core Pipeline Modules
+[NEW] 
+main.py
+Initialize FastAPI app.
+Configure CORS, TrustedHostMiddleware, and security headers (CSP, HSTS, X-Frame-Options).
+Define the POST /api/v1/extract endpoint:
+Reads PDF file payload.
+Checks API Key validation via dependency injection (X-API-Key header).
+Runs the classification and extraction pipeline.
+Returns JSON containing document_type, extracted_data, and processing metadata.
+Define GET /health endpoint for health checks.
+[NEW] 
+auth.py
+Implement API Key authorization middleware.
+Extract verification key from environment variables (fallback to a default test key if none set).
+Append security response headers to all responses.
+[NEW] 
+classifier.py
+Scan the first few pages of the document.
+Use anchor strings to classify the document type:
+"Form W-2" / "Wage and Tax Statement" -> W2
+"Form 1099-INT" / "Interest Income" -> 1099-INT
+"Form 1099-DIV" / "Dividends and Distributions" -> 1099-DIV
+"Form 5498-SA" / "HSA, Archer MSA" -> 5498-SA
+"Consolidated Brokerage Statement" / "Goldman Sachs" -> Consolidated Brokerage Statement
+[NEW] 
+ocr_engine.py
+Implement text extraction pipeline:
+Try direct extraction using PyMuPDF text APIs.
+If the extracted text has a character count below 100, render pages as images and apply PaddleOCR to transcribe text with coordinates.
+Return structured text lines with spatial information (bounding boxes) for accurate spatial regex anchoring.
+[NEW] 
+parser.py
+Implement format-specific parsers mapping raw OCR text blocks to target keys:
+W-2: Extract SSN, EIN, Wages, Federal tax withheld, Employer name/address, Zipcode.
+1099-INT: Extract Payer TIN, Recipient TIN, Interest Income, Federal tax withheld.
+1099-DIV: Extract Payer TIN, Recipient TIN, Ordinary dividends, Qualified dividends, Capital gain.
+5498-SA: Extract Trustee TIN, Participant TIN, HSA contributions.
+Consolidated Brokerage Statement: Extract Payer/Recipient names, Taxpayer details, and transaction table items.
+Verification Plan
+Automated Tests
+Run validation scripts locally:
+
+API Validation: Run endpoint tests using FastAPI's TestClient to verify security headers and API key rejections.
+bash
+
+pytest tests/test_api.py
+Extraction Accuracy: Run parser tests against all 10 sets of sample PDFs. Check if extracted JSON fields match the expectations (e.g. valid SSN format, numeric dollar amounts, etc.).
+bash
+
+pytest tests/test_extraction.py
+Manual Verification
+Build the Docker image:
+bash
+
+docker build -t robo-ocr-service .
+Run the Docker container locally:
+bash
+
+docker run -p 8000:8000 -e API_KEY=test-sec-key-123 robo-ocr-service
+Test API upload using PowerShell/cURL to check response and headers:
+powershell
+
+Invoke-RestMethod -Uri "http://localhost:8000/api/v1/extract" -Method Post -Headers @{"X-API-Key"="test-sec-key-123"} -InFile "01 - ROBO1040 - All Documents\01 - ROBO - Sample PDF Document - 10 Set\01 - W2 Form - Sample Document (10 Set)\01 - Document - Form W-2.pdf" -ContentType "application/pdf"
