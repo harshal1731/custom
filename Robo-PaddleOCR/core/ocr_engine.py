@@ -1,4 +1,9 @@
 import os
+
+# Bypass model source connectivity checks for offline/air-gapped environments
+os.environ["DISABLE_MODEL_SOURCE_CHECK"] = "True"
+os.environ["PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK"] = "True"
+
 import fitz  # PyMuPDF
 import logging
 from PIL import Image
@@ -19,9 +24,16 @@ def get_paddle_ocr():
 
     try:
         from paddleocr import PaddleOCR
-        # Initialize PaddleOCR with basic language parameter to avoid argument mismatch
-        _paddle_ocr_instance = PaddleOCR(lang='en')
-        logger.info("PaddleOCR successfully initialized.")
+        # Initialize PaddleOCR with optimized parameters for faster local CPU execution
+        _paddle_ocr_instance = PaddleOCR(
+            lang='en',
+            ocr_version='PP-OCRv5',
+            use_doc_orientation_classify=False,
+            use_doc_unwarping=False,
+            use_textline_orientation=False,
+            enable_mkldnn=True
+        )
+        logger.info("PaddleOCR successfully initialized with optimized CPU settings.")
         return _paddle_ocr_instance
     except Exception as e:
         logger.warning(f"PaddleOCR failed to initialize: {e}. Falling back to PyMuPDF only.")
@@ -87,31 +99,49 @@ def extract_text_from_pdf(pdf_bytes: bytes) -> tuple[list[dict], bool]:
             temp_filename = f"temp_page_{page_idx}.png"
             img.save(temp_filename)
             
-            result = ocr.ocr(temp_filename, cls=True)
+            try:
+                result = ocr.ocr(temp_filename, cls=True)
+            except TypeError:
+                result = ocr.ocr(temp_filename)
             
             # Clean up temp file
             if os.path.exists(temp_filename):
                 os.remove(temp_filename)
                 
             if result and result[0]:
-                for line in result[0]:
-                    box = line[0]  # List of 4 points: [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
-                    text_str, confidence = line[1]
-                    
-                    # Calculate bounding box coordinates
-                    xs = [pt[0] for pt in box]
-                    ys = [pt[1] for pt in box]
-                    x0, x1 = min(xs), max(xs)
-                    y0, y1 = min(ys), max(ys)
-                    
-                    ocr_blocks.append({
-                        "x0": float(x0),
-                        "y0": float(y0),
-                        "x1": float(x1),
-                        "y1": float(y1),
-                        "text": text_str.strip(),
-                        "page": page_idx + 1
-                    })
+                res_obj = result[0]
+                # Check if it is the newer PaddleX OCRResult dictionary-like object
+                if isinstance(res_obj, dict) and "rec_texts" in res_obj and "rec_boxes" in res_obj:
+                    texts = res_obj["rec_texts"]
+                    boxes = res_obj["rec_boxes"]
+                    for idx, text_str in enumerate(texts):
+                        box = boxes[idx]  # usually [x0, y0, x1, y1]
+                        x0, y0, x1, y1 = box[0], box[1], box[2], box[3]
+                        ocr_blocks.append({
+                            "x0": float(x0),
+                            "y0": float(y0),
+                            "x1": float(x1),
+                            "y1": float(y1),
+                            "text": text_str.strip(),
+                            "page": page_idx + 1
+                        })
+                else:
+                    # Fallback to standard list-based PaddleOCR format
+                    for line in res_obj:
+                        box = line[0]  # [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+                        text_str, confidence = line[1]
+                        xs = [pt[0] for pt in box]
+                        ys = [pt[1] for pt in box]
+                        x0, x1 = min(xs), max(xs)
+                        y0, y1 = min(ys), max(ys)
+                        ocr_blocks.append({
+                            "x0": float(x0),
+                            "y0": float(y0),
+                            "x1": float(x1),
+                            "y1": float(y1),
+                            "text": text_str.strip(),
+                            "page": page_idx + 1
+                        })
         except Exception as ocr_err:
             logger.error(f"Error running OCR on page {page_idx + 1}: {ocr_err}")
             

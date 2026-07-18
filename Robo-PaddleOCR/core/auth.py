@@ -1,18 +1,29 @@
 import os
-from fastapi import Security, HTTPException, status
-from fastapi.security.api_key import APIKeyHeader
+from dotenv import load_dotenv
+from fastapi import Security, HTTPException, status, Header, Form
+from typing import Optional
 
-API_KEY_NAME = "X-API-Key"
-api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=True)
+# Load variables from .env file if it exists
+load_dotenv()
 
 # Fetch API key from environment variable (default fallback if not set)
 DEFAULT_API_KEY = "robo-secret-key-2026"
 GET_API_KEY = os.getenv("API_KEY", DEFAULT_API_KEY)
 
-async def verify_api_key(api_key: str = Security(api_key_header)):
+async def verify_api_key(
+    x_api_key_header: Optional[str] = Header(None, alias="X-API-Key"),
+    x_api_key_form: Optional[str] = Form(None, alias="X-API-Key")
+):
     """
-    Dependency that verifies the presence and validity of the X-API-Key header.
+    Verifies the presence and validity of the X-API-Key, 
+    accepting it from either HTTP Headers or the Form body.
     """
+    api_key = x_api_key_header or x_api_key_form
+    if not api_key:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Missing API Key. Provide it in X-API-Key header or form field.",
+        )
     if api_key != GET_API_KEY:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

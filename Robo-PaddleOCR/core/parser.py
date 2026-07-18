@@ -7,31 +7,76 @@ logger = logging.getLogger("robo-ocr-service")
 def extract_amount(text: str) -> Optional[float]:
     """
     Cleans up a text block to extract a currency/float value.
-    Supports comma separators and dollar signs, e.g., "$123,456.78" -> 123456.78
+    Excludes negative values and single-digit integers (like W-2 or box numbers).
     """
-    # Remove dollar sign, spaces, and other symbols
-    cleaned = text.replace("$", "").replace(" ", "").replace("\u2019", "").replace("'", "")
-    # Match decimal values or whole numbers
-    match = re.search(r'(-?\b\d+(?:,\d{3})*(?:\.\d{2})?\b)', cleaned)
+    # Remove dollar sign, spaces, commas, and other symbols
+    cleaned = text.replace("$", "").replace(" ", "").replace(",", "").replace("\u2019", "").replace("'", "")
+    # Match non-negative decimal values, or whole numbers of 2+ digits, or exactly 0
+    match = re.search(r'(\b\d{2,}(?:\.\d{1,2})?\b|\b\d\.\d{1,2}\b|\b0\b)', cleaned)
     if match:
-        val = match.group(1).replace(",", "")
+        val = match.group(1)
         try:
             return float(val)
         except ValueError:
             return None
     return None
 
+def find_spatial_value(blocks: List[dict], keyword: str) -> Optional[float]:
+    """
+    Looks for the keyword in blocks, then finds the closest numeric block directly below it vertically.
+    """
+    try:
+        kw_pattern = re.compile(keyword, re.IGNORECASE)
+    except Exception:
+        kw_pattern = re.compile(re.escape(keyword), re.IGNORECASE)
+        
+    label_block = None
+    for b in blocks:
+        if kw_pattern.search(b["text"]):
+            label_block = b
+            break
+            
+    if not label_block:
+        return None
+        
+    candidates = []
+    for b in blocks:
+        if b["page"] != label_block["page"]:
+            continue
+            
+        b_center = (b["x0"] + b["x1"]) / 2
+        l_center = (label_block["x0"] + label_block["x1"]) / 2
+        x_overlap = min(b["x1"], label_block["x1"]) - max(b["x0"], label_block["x0"])
+        
+        # Check if block is vertically below label block (within 60px) and horizontally aligned
+        is_below = b["y0"] >= label_block["y1"] - 5 and b["y0"] - label_block["y1"] < 60
+        is_aligned = x_overlap > 0 or abs(b_center - l_center) < 50
+        
+        if is_below and is_aligned:
+            amt = extract_amount(b["text"])
+            if amt is not None:
+                candidates.append((b["y0"] - label_block["y1"], amt))
+                
+    if candidates:
+        candidates.sort(key=lambda x: x[0])
+        return candidates[0][1]
+        
+    return None
+
 def find_value_after_keyword(lines: List[str], keyword: str, is_numeric: bool = True) -> Optional[Any]:
     """
-    Helper to search for a value that appears immediately after a keyword on the same line or next line.
+    Finds a value after a keyword on the same line or next line using regex-friendly compilation.
     """
-    kw_pattern = re.compile(re.escape(keyword), re.IGNORECASE)
+    try:
+        kw_pattern = re.compile(keyword, re.IGNORECASE)
+    except Exception:
+        kw_pattern = re.compile(re.escape(keyword), re.IGNORECASE)
+        
     for idx, line in enumerate(lines):
-        if kw_pattern.search(line):
-            # First check the remainder of this line
-            line_parts = line.split(keyword, 1)
-            if len(line_parts) > 1 and line_parts[1].strip():
-                val_part = line_parts[1].strip()
+        match = kw_pattern.search(line)
+        if match:
+            val_part = line[match.end():].strip()
+            if val_part:
                 if is_numeric:
                     amt = extract_amount(val_part)
                     if amt is not None:
@@ -39,7 +84,7 @@ def find_value_after_keyword(lines: List[str], keyword: str, is_numeric: bool = 
                 else:
                     return val_part
             
-            # If not found on same line, look at the next line
+            # Check next line
             if idx + 1 < len(lines):
                 next_line = lines[idx + 1].strip()
                 if is_numeric:
@@ -49,6 +94,16 @@ def find_value_after_keyword(lines: List[str], keyword: str, is_numeric: bool = 
                 else:
                     return next_line
     return None
+
+def find_value(blocks: List[dict], lines: List[str], keyword: str, is_numeric: bool = True) -> Optional[Any]:
+    """
+    Unified extraction helper that tries spatial bounding box matching first, then falls back to regex lines.
+    """
+    if is_numeric:
+        val = find_spatial_value(blocks, keyword)
+        if val is not None:
+            return val
+    return find_value_after_keyword(lines, keyword, is_numeric)
 
 def get_sorted_lines(blocks: List[dict]) -> List[str]:
     """
@@ -113,9 +168,9 @@ def parse_w2(lines: List[str], blocks: List[dict]) -> Dict[str, Any]:
             data["year"] = match.group(1)
             break
             
-    # 2. SSN: 000-00-0000 or 9 digits
+    # 2. SSN: 000-00-0000, XXX-XX-0000, or 9 digits
     for line in lines:
-        match = re.search(r'\b(\d{3}-\d{2}-\d{4})\b', line)
+        match = re.search(r'\b([X\d]{3}-[X\d]{2}-\d{4})\b', line)
         if match:
             data["employee_ssn"] = match.group(1)
             break
@@ -127,27 +182,19 @@ def parse_w2(lines: List[str], blocks: List[dict]) -> Dict[str, Any]:
             data["employer_ein"] = match.group(1)
             break
             
-    # 4. Box Values (Wages, Taxes)
-    # Box 1: Wages, tips, other compensation
-    # Box 2: Federal income tax withheld
-    # Box 3: Social security wages
-    # Box 4: Social security tax withheld
-    # Box 5: Medicare wages and tips
-    # Box 6: Medicare tax withheld
-    
-    # Let's search for values using keywords and positional regex
+    # 4. Box Values (Wages, Taxes) using spelling-tolerant keywords and spatial search
     box_patterns = {
-        "wages_tips_other_comp": [r"Wages,\s*tips", r"Box\s*1\b", r"\b1\s+Wages"],
-        "federal_income_tax_withheld": [r"Federal\s*income\s*tax", r"Box\s*2\b", r"\b2\s+Federal"],
+        "wages_tips_other_comp": [r"Wages", r"Box\s*1\b", r"\b1\s+Wages"],
+        "federal_income_tax_withheld": [r"Fed[ea]ral\s*income", r"Box\s*2\b", r"\b2\s+Fed[ea]ral"],
         "social_security_wages": [r"Social\s*security\s*wages", r"Box\s*3\b", r"\b3\s+Social"],
-        "social_security_tax_withheld": [r"Social\s*security\s*tax\s*withheld", r"Box\s*4\b", r"\b4\s+Social"],
+        "social_security_tax_withheld": [r"Social\s*security\s*tax", r"Box\s*4\b", r"\b4\s+Social"],
         "medicare_wages_and_tips": [r"Medicare\s*wages", r"Box\s*5\b", r"\b5\s+Medicare"],
-        "medicare_tax_withheld": [r"Medicare\s*tax\s*withheld", r"Box\s*6\b", r"\b6\s+Medicare"]
+        "medicare_tax_withheld": [r"Medicare\s*tax", r"Box\s*6\b", r"\b6\s+Medicare"]
     }
     
     for key, patterns in box_patterns.items():
         for pattern in patterns:
-            val = find_value_after_keyword(lines, pattern, is_numeric=True)
+            val = find_value(blocks, lines, pattern, is_numeric=True)
             if val is not None:
                 data[key] = val
                 break

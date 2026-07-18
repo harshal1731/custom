@@ -30,12 +30,15 @@ app.add_middleware(
 @app.middleware("http")
 async def add_security_headers_middleware(request, call_next):
     """
-    Middleware to append recommended security headers to all responses.
+    Middleware to append recommended security headers to all responses,
+    excluding Swagger/Redoc UI documentation routes to allow CDN scripts to run.
     """
     response = await call_next(request)
-    headers = get_security_headers()
-    for key, val in headers.items():
-        response.headers[key] = val
+    path = request.url.path
+    if not (path.startswith("/docs") or path.startswith("/redoc") or path.startswith("/openapi.json")):
+        headers = get_security_headers()
+        for key, val in headers.items():
+            response.headers[key] = val
     return response
 
 @app.get("/health", status_code=status.HTTP_200_OK)
@@ -61,30 +64,44 @@ async def extract_fields(
 
     start_time = time.time()
     try:
-        # Read file contents into memory
+        # 1. Measure File Load Time
+        t_start_load = time.time()
         pdf_bytes = await file.read()
+        load_time = time.time() - t_start_load
+        logger.info(f"[PERFORMANCE] Document '{file.filename}' loaded in {load_time * 1000:.2f} ms.")
         
-        # 1. Extract text and layout metadata
+        # 2. Measure OCR / Text Extraction Time
+        t_start_ocr = time.time()
         logger.info(f"Extracting text from document: {file.filename}")
         extracted_text_blocks, has_ocr_fallback = extract_text_from_pdf(pdf_bytes)
+        ocr_time = time.time() - t_start_ocr
+        logger.info(f"[PERFORMANCE] Text extraction / OCR completed in {ocr_time * 1000:.2f} ms (OCR Fallback: {has_ocr_fallback}).")
         
         # Compile all text lines for classification
         full_text = "\n".join([block["text"] for block in extracted_text_blocks])
         
-        # 2. Classify document type
+        # 3. Measure Document Classification Time
+        t_start_classify = time.time()
         logger.info("Classifying document type...")
         doc_type = classify_document(full_text)
-        logger.info(f"Document classified as: {doc_type}")
+        classify_time = time.time() - t_start_classify
+        logger.info(f"[PERFORMANCE] Document classified as: '{doc_type}' in {classify_time * 1000:.2f} ms.")
         
-        # 3. Parse fields based on document type
+        # 4. Measure Parse/Extraction Time
+        t_start_parse = time.time()
         logger.info(f"Parsing fields for {doc_type}...")
         parsed_data = parse_extracted_text(doc_type, extracted_text_blocks)
+        parse_time = time.time() - t_start_parse
+        logger.info(f"[PERFORMANCE] Form parsing completed in {parse_time * 1000:.2f} ms.")
         
+        # 5. Measure Total Request Time
         processing_time = time.time() - start_time
-        logger.info(f"Extraction completed in {processing_time:.2f} seconds.")
+        logger.info(
+            f"[PERFORMANCE SUMMARY] Total Request Processing Time: {processing_time:.2f} s "
+            f"(Load: {load_time*1000:.1f}ms, OCR: {ocr_time*1000:.1f}ms, Classify: {classify_time*1000:.1f}ms, Parse: {parse_time*1000:.1f}ms)"
+        )
         
         # Calculate a mock/simple confidence score based on filled mandatory fields
-        # (This can be refined per form type)
         confidence = 0.95 if doc_type != "Unknown" else 0.0
         
         return ExtractionResponse(
@@ -101,3 +118,4 @@ async def extract_fields(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Internal processing error: {str(e)}"
         )
+# f87e0b7829c386218e4763642a74790c608424ad63ebe7fb9e57bc6a98e02e5v
