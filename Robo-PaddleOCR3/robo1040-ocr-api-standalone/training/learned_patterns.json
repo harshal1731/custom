@@ -1,0 +1,926 @@
+{
+  "type": "label_memory_v1",
+  "description": "Value examples mined from ground truth. Used for validation/few-shot schema prompts \u2014 not issuer hardcoding.",
+  "forms": {
+    "W-2": {
+      "Year": [
+        "2024",
+        "2021"
+      ],
+      "Employee's social security number": [
+        "047-52-7330",
+        "242-93-5188",
+        "247-47-0195",
+        "259-11-0070",
+        "XXX-XX-2930",
+        "XXX-XX-3014",
+        "XXX-XX-4999",
+        "XXX-XX-7190",
+        "XXX-XX-7606"
+      ],
+      "Employer identification number (EIN)": [
+        "23-1945930",
+        "26-0402100",
+        "26-0795633",
+        "57-0935917",
+        "57-1098556",
+        "57-1110444",
+        "57-6000118",
+        "57-6001079",
+        "86-2232853"
+      ],
+      "Employer's name, address, and ZIP code": [
+        "BAD BUNNIES COFFEE LLC 46,000.00 2,852.00, 242 ASHLEY AVE, CHARLESTON, SC 29402",
+        "BISHOP ENGLAND HIGH SCHO OL, 363 SEVEN FARMS DRIVE, CHARLESTON, SC 29492",
+        "I INS U InC, Charleston,,,, SC 29407",
+        "Medical University Hospital Authority, 1 Poston Road, Charleston,,,, SC 29407",
+        "STE250, 1701 DIRECTORS BLVD, AUSTIN, TX 78744",
+        "UMA Common Paymaster, 1 Poston Road, Charleston,,,, SC 29407",
+        "c Employers namo,address,and ZiP coda 1 Wages,tips,othor compensation 66646.44 2 Federal Income tax wlthhald 7264.49, Town of Mount Pleasant 100 Ann Edwards Lane 3 Social socurity wagos 4 8ocial securtty tax withheld"
+      ],
+      "Control number": [
+        "140080 NCN2/1EU 000300 Dept. Corp. Employer use only OMB NO. 1545-0008",
+        "20230218-3 2800.00 40.60",
+        "Employee's name, address, and ZiP code",
+        "W-2",
+        "c Employers namo,address,and ZiP coda 1 Wages,tips,othor compensation 66646.44 2 Federal Income tax wlthhald 7264.49",
+        "e Employee's name, address, and ZiP code",
+        "e Employee\u2019s first name and initial Last name",
+        "number"
+      ],
+      "Employee's first name and initial": [
+        "BAD",
+        "Employer",
+        "JONATHAN",
+        "John",
+        "Margaret",
+        "NETHA",
+        "Nonqualified",
+        "Thomas"
+      ],
+      "Last name": [
+        "COFFEE",
+        "Employer",
+        "Freedy",
+        "Gee",
+        "Identificatlon",
+        "KREAMER",
+        "Masi",
+        "WINGARD"
+      ],
+      "Employee's address and ZIP code": [
+        "100 Ann Edwards Lane",
+        "13 ZIP Stat code 29464 emp.Ret. plan X 3rd",
+        "1429 BEDFORD DRIVE, CHARLESTON, SC 29407",
+        "242 ASHLEY AVE, CHARLESTON, SC 29402",
+        "303 BROAD WAY, AUSTIN, TX 78702",
+        "501 RICE HOPE DRIVE",
+        "872 Parrot Creek Way, CHARLESTON, SC 29412",
+        "P.O. BOX 31058, Thomas Masi, SC 29417"
+      ],
+      "1 Wages, tips, other compensation": [
+        "104207.17",
+        "1395.98",
+        "2800.00",
+        "3495.88",
+        "46000.00",
+        "66646.44",
+        "66795.30",
+        "7190161764.56",
+        "794416.25"
+      ],
+      "2 Federal income tax withheld": [
+        "104207.17",
+        "161764.56",
+        "16868.79",
+        "2800.00",
+        "30237.78",
+        "46000.00",
+        "66646.44",
+        "8500.00"
+      ],
+      "5 Medicare wages and tips": [
+        "0.00",
+        "114878.72",
+        "161764.56",
+        "2800.00",
+        "46000.00",
+        "70395.30",
+        "77513.39",
+        "794416.25",
+        "8500.00"
+      ],
+      "6 Medicare tax withheld": [
+        "1123.94",
+        "114878.72",
+        "161764.56",
+        "2800.00",
+        "4489.63",
+        "46000.00",
+        "794416.25",
+        "8500.00"
+      ],
+      "8 Allocated tips": [
+        "0.00",
+        "123.25",
+        "1584.00",
+        "2800.00",
+        "43108.61",
+        "46000.00",
+        "722.40",
+        "77513.39"
+      ],
+      "12a Code/Amount": [
+        "1 5 d 0000008287 c 3 Wages, Social Medicare Control THE 100 MALVERN, Employer\u2019s VANGUARD security VANGUARD tips, number UEY wages name, other 794416.25 168600.00 794416.25 wages and PA comp. address, 1376 Dept. tips BLVD 19355 GROUP and CCNT 2 4 6 Corp. ZIP Federal Social Medicare code INC security income Employer tax 176498.10 withheld 10453.20 16868.79 tax tax withheld withheld use 16475 only",
+        "13.Statutory employee 14.Other 12b.Code",
+        "14 Other 12b NETHA KREAMER",
+        "16 Stato SC Employor's state ID Numbor 16 Stato wages, tips, otc. 250306048 66646.44 17 State income tax 2814.62 13 employoo Statutory plan Rotirement \u533a slck pay Third-party Code 12b 12c G I 2080.00",
+        "C 1584.00",
+        "C 722.40",
+        "Employee's",
+        "Employee\u2019s",
+        "e Employee's name, address, and ZiP code Suff. 13 Statutory employeo Retiromont plan Third-party gickpay 14 Other 12b"
+      ],
+      "12b Code/Amount": [
+        "1 5 d 0000008287 c 3 Wages, Social Medicare Control THE 100 MALVERN, Employer\u2019s VANGUARD security VANGUARD tips, number UEY wages name, other 794416.25 168600.00 794416.25 wages and PA comp. address, 1376 Dept. tips BLVD 19355 GROUP and CCNT 2 4 6 Corp. ZIP Federal Social Medicare code INC security income Employer tax 176498.10 withheld 10453.20 16868.79 tax tax withheld withheld use 16475 only",
+        "12c",
+        "18 Local wagos,tlps, etc. 19 Local incomo tax 20 Locality name 14 Other Code Code 12d AA DD 1 - 30836.52 3640.00",
+        "DD 18934.80",
+        "Employer",
+        "Retirement plan 12c Code",
+        "Retirement plan 12c.Code",
+        "Richard Harden b Employer identificatlon number (EIN) 12c",
+        "Wages,"
+      ],
+      "12c Code/Amount": [
+        "1 5 d 0000008287 c 3 Wages, Social Medicare Control THE 100 MALVERN, Employer\u2019s VANGUARD security VANGUARD tips, number UEY wages name, other 794416.25 168600.00 794416.25 wages and PA comp. address, 1376 Dept. tips BLVD 19355 GROUP and CCNT 2 4 6 Corp. ZIP Federal Social Medicare code INC security income Employer tax 176498.10 withheld 10453.20 16868.79 tax tax withheld withheld use 16475 only",
+        "12d",
+        "18 Local wagos,tlps, etc. 19 Local incomo tax 20 Locality name 14 Other Code Code 12d AA DD 1 - 30836.52 3640.00",
+        "242 Ashley Ave Apt B 86-2232853",
+        "Employer\u2019s",
+        "Federal",
+        "Retirement plan",
+        "Third-party sick pay 12d.Code",
+        "tips, etc. 17 State income tax"
+      ],
+      "12d Code/Amount": [
+        "047-52-7330",
+        "1 5 d 0000008287 c 3 Wages, Social Medicare Control THE 100 MALVERN, Employer\u2019s VANGUARD security VANGUARD tips, number UEY wages name, other 794416.25 168600.00 794416.25 wages and PA comp. address, 1376 Dept. tips BLVD 19355 GROUP and CCNT 2 4 6 Corp. ZIP Federal Social Medicare code INC security income Employer tax 176498.10 withheld 10453.20 16868.79 tax tax withheld withheld use 16475 only",
+        "13 Stat emp Ret plan 3rd party sick pay",
+        "15.State Employer's state ID number 16. State wages, tips, etc. 17.State income tax",
+        "Control",
+        "DD",
+        "Jewell",
+        "SC 254038928 104207.17 5238.08",
+        "SCci) 25285895-6 161764.56 7170.09"
+      ],
+      "13 Statutory employee": [
+        "14.Other",
+        "14Other",
+        "Retiremont",
+        "Retiromont",
+        "and",
+        "emp.",
+        "the"
+      ],
+      "13 Retirement plan": [
+        "12c Code",
+        "12c.Code",
+        "Third-party",
+        "X",
+        "being",
+        "sick pay",
+        "sickpay"
+      ],
+      "13 Third-party sick pay": [
+        "12d Code",
+        "12d.Code",
+        "14 Other",
+        "Code",
+        "Inc.",
+        "Statement",
+        "negligence",
+        "sick"
+      ],
+      "14 Other": [
+        "104207.17 9568.85",
+        "11 14 15 17 19 Nonqualified Other SC State Local State income income Employer\u2019s 25608545 26.00 plans tax tax 43108.61 LST state 3 ID no. 12a 12b 12c 12d 13 16 18 20 Stat State Local Locality See W AA DD emp. instructions wages, wages, Ret. name X plan tips, 700842.64 tips, for 19723.00 25310.98 3rd box 8300.00 etc. etc. party 12 sick pay \u00a4 TERENCE 1478 MOUNT 2024 ADP, KINLOCH Inc. PLEASANT, P HOWARD LANE SC 29464 PAGE 03 OF 03 Social Security Number: XXX-XX-3014",
+        "2 wages. that were subtracted from total wages to arrive at your W- W-2 Wages Other ProtaxWago Limlt 66646.44 77513.39 77513.39",
+        "8500.00 2 Federal income tax withheld",
+        "Internal",
+        "XXX-XX-2930 2800.00 1365.22",
+        "XXX-XX-7190 161764.56 20465.79",
+        "b Employer 26-0402100 identification number (EIN) 9",
+        "c Employer's name, address, and ZiP code 8 Altocated tips 3 Social security wages 4 Social security tax withheld"
+      ],
+      "15 State / Employer's state ID number": [
+        "1",
+        "161817",
+        "18 Local wages, tips, etc. 19 Local income tax 20 Locality name",
+        "Filed",
+        "SC 11173208-2 46,000.00 2,331.05",
+        "SC 250314618 8500.00",
+        "SC 254038928",
+        "SC 25411574-6 2800.00 113.68",
+        "imposed"
+      ],
+      "16 State wages, tips, etc.": [
+        "104207.17",
+        "176498.10",
+        "2800.00",
+        "30237.78",
+        "46000.00",
+        "66646.44",
+        "8500.00"
+      ],
+      "17 State income tax": [
+        "161764.56",
+        "2800.00",
+        "30237.78",
+        "46000.00",
+        "490.68",
+        "5238.08",
+        "66646.44",
+        "794416.25"
+      ],
+      "18 Local wages, tips, etc.": [
+        "30237.78",
+        "3640.00",
+        "40.60",
+        "46000.00",
+        "490.68"
+      ],
+      "10 Dependent care benefits": [
+        "0.00",
+        "1584.00",
+        "2331.05",
+        "43108.61"
+      ],
+      "11 Nonqualified plans": [
+        "1040.00",
+        "1584.00",
+        "246000.00",
+        "2503146188500.00",
+        "30237.78",
+        "722.40",
+        "794416.25"
+      ],
+      "20 Locality name": [
+        "address,",
+        "14 Other",
+        "Form W-2 Wage and Tax Statement 2024 Dept. of the Treasury - iRS",
+        "Form W-2 Wage and Tax Statement 2024 Dept. of the Treasury-IRS",
+        "Wages, tips, other comp. 8500.00 2Federal income tax withheld 1395.98 Wages, tips, other comp. 8500.00"
+      ],
+      "Suff.": [
+        "11",
+        "Richard Harden b Employer identificatlon number (EIN) 12c",
+        "Thomas D 3098 MOONLIGHT DRIVE Plyler 9 \u300d 10 Dependent caro benefits"
+      ],
+      "19 Local income tax": [
+        "30237.78",
+        "30836.52",
+        "46000.00",
+        "8500.00"
+      ]
+    },
+    "1099-INT": {
+      "Year": [
+        "2024",
+        "2015",
+        "2021"
+      ],
+      "PAYER'S name, address, and telephone": [
+        "ALLY BANK, P.O.BOX951, HORSHAM, PA 19044",
+        "AMERICAN EXPRESS NATIONAL BANK, P.O. BOX 30384, SALT LAKE CITY, UT 84130-0384",
+        "FIRST-CITIZENS BANK & TRUST COMPANY, GH, NC 27611-7131",
+        "Interest, P.O. BOX 5192, SIOUXFALLS, SD 57117-5192",
+        "Interest, P.O. BOX 819, WILSON, NC 27894-0819",
+        "JAMES & MICHELLE RODRIGUEZ, 1511 ROYALCOLONY RD, JOHNS ISLAND, SC 29455-3153",
+        "Mark and Susan Clark Family Trust Box 4.Federal Income Tax Withheld 0.00, Tucson, AZ 85718"
+      ],
+      "Payer's TIN": [
+        "11-2869526",
+        "13-3571598",
+        "20-1001796",
+        "23-2019846",
+        "38-1798424",
+        "45-2499523",
+        "46-4858736",
+        "56-0223230",
+        "59-3482833",
+        "94-1347393"
+      ],
+      "Recipient's TIN": [
+        "345-21-4563",
+        "XXX-XX-1234",
+        "XXX-XX-2756",
+        "XXX-XX-2806",
+        "XXX-XX-4300",
+        "XXX-XX-4860",
+        "XXX-XX-5097",
+        "XXX-XX-5367",
+        "XXX-XX-7739"
+      ],
+      "Recipient's Name": [
+        "CLIFTONWENDELL POSTON",
+        "HEATH B TIMMERMAN",
+        "JAMES & MICHELLE RODRIGUEZ",
+        "Jack Andrew First",
+        "MARY F DICK",
+        "MICHELLE L RODRIGUEZ",
+        "VICTORIA LOBECK"
+      ],
+      "Recipient's Street Address (including apt. no.)": [
+        "1091 BLOCKADE RUNNER PKWY",
+        "150 SOUTHWOLD CIR",
+        "1511 ROYAL COLONY RD",
+        "1511 ROYALCOLONY RD",
+        "200 13-3571598 West Sachs Street",
+        "3424 BARNWELL HWY",
+        "641 GATE POST DR"
+      ],
+      "Recipient's city, state, country and Zip code": [
+        "JOHNS ISLAND, SC 29455-3153",
+        "Bank New USA York, NY 10282",
+        "DENMARK, SC 29042-9126",
+        "GOOSECREEK, SC 29445-5315",
+        "MOUNT PLEASANT, SC 29464"
+      ],
+      "FATCA filing Requirement": [
+        "$",
+        "$0.00",
+        "No",
+        "filing",
+        "return,",
+        "tax-exempt"
+      ],
+      "Account Number": [
+        "00029267",
+        "1099-INT",
+        "2211545799",
+        "254833541",
+        "90819457T4",
+        "XXXXXX6333",
+        "XXXXXXXXXXXX1234",
+        "number",
+        "your tax refund or part or all may have been applied against other taxes you owed."
+      ],
+      "Payer's RTN (Optional)": [
+        "Interest",
+        "minimum",
+        "name,",
+        "or foreign postal code, and telephone no.",
+        "the"
+      ],
+      "1 Interest Income": [
+        "0.54",
+        "11.18",
+        "1277.07",
+        "1680.56",
+        "20.20",
+        "2653.39",
+        "3909.17",
+        "8986.68",
+        "90.62"
+      ],
+      "2 Early withdrawal penalty": [
+        "0.00",
+        "8986.68"
+      ],
+      "3 Interest on U.S. Savings Bonds and Treasury obligations": [
+        "0.00"
+      ],
+      "4 Federal income tax withheld": [
+        "0.00"
+      ],
+      "5 Investment expenses": [
+        "0.00",
+        "8986.68"
+      ],
+      "6 Foreign tax paid": [
+        "0.00",
+        "8986.68"
+      ],
+      "7 Foreign country or U.S. possession": [
+        "6251.",
+        "641 GATE POST DR MOUNT PLEASANT, SC 29464 $0.00 required to file a",
+        "State",
+        "Tax-exempt interest 8 0.00",
+        "other"
+      ],
+      "8 Tax-exempt interest": [
+        "0.00"
+      ],
+      "9 Specified private activity bond Interest": [
+        "0.00",
+        "8986.68"
+      ],
+      "10 Market discount": [
+        "0.00",
+        "1.17"
+      ],
+      "11 Bond premium": [
+        "0.00"
+      ],
+      "12 Bond premium on Treasury obligations": [
+        "0.00"
+      ],
+      "13 Bond premium on tax-exempt bond": [
+        "0.00"
+      ],
+      "14 Tax-exempt and tax credit bond CUSIP no.": [
+        "Account number (see instructions) 35556396 14 Tax-exempt bond CUSIP and no. tax credit 15 State 16 State identification no. 17 State tax withheld",
+        "Box 4. Showa beckup withholding, Generaly, o psyer must backyp withhold Hyou dld npt furnlsh your TIN or you did not furntsh the correct TiN to the payer. See Form W.9. Include this emount on your income tax rotum as tax withheld. Nemineen. thl form includes amounts belonging o nother personf, you re consldered a nominee reciplent Completo Boxes 16-17. State tex withhold reporting boxog. g Fomm 1os9linf tor oach of thg other owners ihowing tho tnoome allocable to @sch. Hle Copy A of the form with tho lis.",
+        "State 15",
+        "This a negligence is important penalty tax information or other sanction and is being may be furnished imposed to on the you Internal if this Revenue income is Service taxable (except and the as IRS indicated). determines If you that are it has required not been to file reported. a return",
+        "XXXXXX6333 66",
+        "and"
+      ],
+      "15 State": [
+        "15",
+        "Form 1099-INT (Rev. 1-2024) (keep for your records) www.irs.gov/Form1099INT SC Department of the Treasury - Internal $ Revenue Service",
+        "SC 254833541 $",
+        "Tax",
+        "Zip(XXXXX",
+        "bond CUSIP no."
+      ],
+      "16 State identification no.": [
+        "12Bond premium on Treasuryobligations",
+        "Form 1099-INT (Rev. 1-2024) (keep for your records) www.irs.gov/Form1099INT SC Department of the Treasury - Internal $ Revenue Service",
+        "State tax withheld 17 0.00",
+        "or",
+        "you"
+      ],
+      "17 State tax withheld": [
+        "0.00",
+        "2.00"
+      ]
+    },
+    "1099-DIV": {
+      "Year": [
+        "2024"
+      ],
+      "PAYER'S name, address, and telephone": [
+        "342.66 342.66 0.00 0.00 0.00 COMPUTERSHARE INCAS CUSTODIANOF THE, POBOX43078, PROVIDENCE, RI 02940",
+        "COMPUTERSHARE, POBOX43078, PROVIDENCE, RI 02940-3078",
+        "COMPUTERSHAREINC AS CUSTODIANOF THE, POBOX43078, PROVIDENCE, RI 02940",
+        "DOMINION ENERGY,INC., 600 EAST CANAL ST",
+        "TIN, 1313 WHISKER POLE LN",
+        "The Southern Company 58-0690070, GHTS, MN 55120-4100",
+        "WALMART INC, P.O. BOX 43078, CHARLESTON, SC 29406-8935"
+      ],
+      "Payer's TIN": [
+        "51-6516897",
+        "13-0871985",
+        "22-3703799",
+        "43-1912740",
+        "54-1229715",
+        "58-0690070",
+        "71-0415188",
+        "82-4698219",
+        "87-2377776"
+      ],
+      "Recipient's TIN": [
+        "XXX-XX-1032",
+        "XXX-XX-1314",
+        "XXX-XX-1381",
+        "XXX-XX-2628",
+        "XXX-XX-3320",
+        "XXX-XX-3531",
+        "XXX-XX-4920",
+        "XXX-XX-5425",
+        "XXX-XX-7624",
+        "XXX-XX-7672"
+      ],
+      "Recipient's Name": [
+        "ANTHONYJYUEN Control",
+        "CHRISTOPHER RYAN MCCLELLEN AND TONYA",
+        "DOMINION ENERGY",
+        "Intemal Revenue Service",
+        "MARY C PERROTT Control",
+        "ROBIN M JENKINS CUST KAITLYN",
+        "THOMASRPERROTT JR"
+      ],
+      "Recipient's Street Address (including apt. no.)": [
+        "108 PRESIDENTIAL DR",
+        "102 PRESIDENT CIR",
+        "1313 WHISKER POLE LN",
+        "2461 LOUISVILLE ST",
+        "600 EAST CANAL ST",
+        "8170 COPPERAS HILL DR"
+      ],
+      "Account Number": [
+        "1099-DIV",
+        "2151-880219352",
+        "4004595383",
+        "C0008822395",
+        "C0019572595",
+        "C0042388017",
+        "C0067938119",
+        "C1004054900"
+      ],
+      "1a Total ordinary dividends": [
+        "0.00",
+        "10.48",
+        "133.52",
+        "197.60",
+        "20.55",
+        "342.66",
+        "7.88"
+      ],
+      "1b Qualified dividends": [
+        "0.00",
+        "10.48",
+        "108.77",
+        "133.52",
+        "197.60",
+        "2.02",
+        "342.66"
+      ],
+      "3 Nondividend distributions": [
+        "0.00",
+        "1.83",
+        "108.77"
+      ],
+      "4 Federal income tax withheld": [
+        "0.00",
+        "1.83",
+        "108.77",
+        "133.52",
+        "47.44"
+      ],
+      "5 Section 199A dividends": [
+        "0.00",
+        "0.03",
+        "0.54",
+        "108.77",
+        "20.55",
+        "33.38"
+      ],
+      "6 Investment expenses": [
+        "0.00",
+        "0.59",
+        "108.77",
+        "20.55",
+        "342.66",
+        "37.54",
+        "84.64",
+        "9.68"
+      ],
+      "7 Foreign tax paid": [
+        "0.00",
+        "20.55",
+        "9.77"
+      ],
+      "8 Foreign country or U.S. possession": [
+        "$0.00 N/A",
+        "C/O COMPUTERSHARE s Fomm 1099-DIV",
+        "Cash",
+        "Dividends (S) Dividends(S) Distributions (S) TAX WITHHELD (S) Paid (S) or U.S. Possession Distr. ()",
+        "RECIPIENT'SID No.ending in: *****7624 s ForRecipient",
+        "RECIPIENT'SID No.ending in: **-4920 $ ForRecipient",
+        "Recipient",
+        "imposed on you If"
+      ],
+      "9 Cash liquidation distributions": [
+        "0.00",
+        "108.77",
+        "197.60",
+        "342.66",
+        "9.77"
+      ],
+      "10 Noncash liquidation distributions": [
+        "0.00",
+        "0.54",
+        "10.48",
+        "7.88"
+      ],
+      "12 Exempt-interest dividends": [
+        "0.00",
+        "1.30",
+        "101.20",
+        "20.55",
+        "3.22",
+        "425.85"
+      ],
+      "14 State": [
+        "108.77 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 443.97 82.88 0.00",
+        "2151-880219352 S",
+        "FEDERAL INCOME",
+        "FEDERALINCOME",
+        "Federal income tax withheld",
+        "ForRecipient",
+        "Form 1099-DIV (Rev. 1-2024) (keep for your records) www.irs.gov/Form1099DIV Department of the Treasury - Internal Revenue Service",
+        "N/A $0.00"
+      ],
+      "2a Total capital gain distr.": [
+        "0.00"
+      ],
+      "2b Unrecap. Sec. 1250 gain": [
+        "0.00",
+        "108.77",
+        "20.55"
+      ],
+      "2d Collectibles (28%) gain": [
+        "0.00",
+        "108.77",
+        "20.55"
+      ],
+      "2e Section 897 ordinary dividends": [
+        "0.00"
+      ],
+      "2f Section 897 capital gain": [
+        "0.00",
+        "108.77"
+      ],
+      "2c Section 1202 gain": [
+        "0.00",
+        "7.88"
+      ],
+      "13 Specified private activity bond interest dividends": [
+        "0.00",
+        "0.03",
+        "1.30",
+        "101.20"
+      ],
+      "16 State tax withheld": [
+        "0.00"
+      ],
+      "Recipient's city, state, country and Zip code": [
+        "DANIELISLAND, SC 29492-8531",
+        "WHISKER POLE LN MT PLEASANT, SC 29466-2443"
+      ],
+      "11 FATCA filing Requirement": [
+        "12 Exempt-Interest divldends",
+        "filing"
+      ],
+      "15 State identification no.": [
+        "108.77 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 443.97 82.88 0.00",
+        "Fomm 1099-DIV",
+        "Form 1099-DIV (Rev. 1-2024) (keep for your records) www.irs.gov/Form1099DIV Department of the Treasury - Internal Revenue Service",
+        "penatty or other"
+      ]
+    },
+    "Consolidated Brokerage Statement": {
+      "Year": [
+        "2024",
+        "2023"
+      ],
+      "Payer Name": [
+        "Charles Schwab",
+        "Ameriprise",
+        "Edward Jones",
+        "J.P. MORGAN SECURITIES LLC",
+        "Morgan Stanley",
+        "NATIONAL FINANCIAL SERVICES LLC",
+        "Raymond James"
+      ],
+      "Account Number": [
+        "510R3347",
+        "87125-8019",
+        "8825-3241",
+        "994-56940",
+        "STON6852-",
+        "Year2024-"
+      ],
+      "1a Total ordinary dividends": [
+        "0.00",
+        "377.65",
+        "4771471.98",
+        "50036.03",
+        "5701.59",
+        "598.71",
+        "778.68"
+      ],
+      "1b Qualified dividends": [
+        "0.00",
+        "32048.00",
+        "377.65",
+        "4769.64",
+        "598.71",
+        "722.55"
+      ],
+      "2a Total capital gain distr.": [
+        "0.00",
+        "41876.15",
+        "448562.08",
+        "458.83"
+      ],
+      "4 Federal income tax withheld": [
+        "0.00",
+        "0.57",
+        "1.24",
+        "71.98"
+      ],
+      "5 Section 199A dividends": [
+        "0.00",
+        "1.15",
+        "1743.16",
+        "650.02"
+      ],
+      "Interest income": [
+        "0.00",
+        "29.05",
+        "3.93",
+        "9.89"
+      ],
+      "Recipient's Name": [
+        "ANAND S MEHTA",
+        "AVA BISHOP",
+        "Address Your Independent Investment Manager",
+        "CHRISTOPHER RYAN MCCLELLEN AND TONYA N MCCLELLEN JTWROS",
+        "JOHN A. DUCKWORTH",
+        "The 2019 Chitwood Family Trust",
+        "Total Relationship Value",
+        "WREN LOUISE JANE FANNING"
+      ],
+      "Recipient's Street Address (including apt. no.)": [
+        "126 Indigo Marsh Cir",
+        "1313 WHISKER POLE LN",
+        "1413 WORKHOUSE COURT",
+        "1759 PIERCE ST",
+        "2019 SC 2019 DR",
+        "235 MAGRATH DARBY BLVD",
+        "247 TUPELO LAKE DR",
+        "4058 BLACKMOOR ST"
+      ],
+      "Recipient ZipCode": [
+        "07310",
+        "29455",
+        "29464-3256",
+        "29466-2443",
+        "29466-7160",
+        "29486-2464",
+        "29492-2700"
+      ],
+      "Recipient City": [
+        "Charleston",
+        "JERSEY CITY",
+        "JOHNS ISLAND",
+        "MOUNT PLEASANT",
+        "MT PLEASANT",
+        "SUMMERVILLE",
+        "TOD MOUNT PLEASANT"
+      ],
+      "Recipient State": [
+        "SC",
+        "NJ"
+      ],
+      "Recipient TIN": [
+        "XXX-XX-5173",
+        "XXX-XX-6922",
+        "XXX-XX-8594",
+        "XXX-XX-9378"
+      ],
+      "Cost or other basis": [
+        "0.00",
+        "214002.84",
+        "78013.93"
+      ],
+      "Payer TIN": [
+        "04-3523567",
+        "59-1237041"
+      ],
+      "Payer Address": [
+        "201 Progress Parkway",
+        "P.O. BOX 183211"
+      ],
+      "Payer ZipCode": [
+        "33716",
+        "43218",
+        "63043-3042"
+      ],
+      "Payer City": [
+        "COLUMBUS",
+        "Maryland Heights",
+        "Saint Petersburg"
+      ],
+      "Payer State": [
+        "FL",
+        "MO",
+        "OH"
+      ],
+      "Proceeds": [
+        "0.00"
+      ]
+    },
+    "5498-SA": {
+      "Year": [
+        "2024",
+        "2023",
+        "2025"
+      ],
+      "TRUSTEE'S or ISSUER'S name, street address, city, state, ZIP": [
+        "REV FEDERAL CREDIT UNION, 200 MARYMEADE DR, SUMMERVILLE SC 29483, (843) 832-2600",
+        "BANK#07202 94-1687665, MT.PLEASANT, SC 29466",
+        "Central Trust Bank, 238 Madison St, Jefferson City, MO 65101",
+        "HealthEquity Corporate, 15 West Scenic Pointe Drive Suite 400, Draper, UT 84020",
+        "Optum Bank, P.O. Box271629, Salt Lake City, UT 84127-1629",
+        "Optum PO Salt Box Lake Bank 271629 City, UT 84127, HARMON WAY, SC 29464-9261",
+        "WEX Inc. $, 1 Hancock Street 2 Total contributions made in 2024 Forn5498-SA, Portland, ME 04101"
+      ],
+      "TRUSTEE'S or ISSUER'S TIN": [
+        "47-0858534",
+        "52-2383166",
+        "57-0377963",
+        "01-0526993",
+        "43-0975002",
+        "94-1687665"
+      ],
+      "PARTICIPANT'S TIN": [
+        "XXX-XX-6651",
+        "248-43-0203",
+        "XXX-XX-0858",
+        "XXX-XX-2606",
+        "XXX-XX-6748",
+        "XXX-XX-6800"
+      ],
+      "PARTICIPANT'S name": [
+        "RHONDA L WALDEN",
+        "ANDREW HARMON",
+        "BRANWELL KAPELUCK",
+        "Daniel Sommer",
+        "JENNIFER TIDWELL CUSTOMER",
+        "James R. Austin",
+        "MAMSA Partici Copy",
+        "tal code, and teiephone number 2024 and 2025 for 2024 2024 MSAIn miion"
+      ],
+      "Street address (including apt. no.)": [
+        "536 JERICO DR",
+        "1 Hancock Street",
+        "128 CORN PLANTERS ST",
+        "2024 qualify Fom they ln",
+        "2860 RIVERTOWNE PARK WAY",
+        "34 BROUGHTON RD",
+        "372 EVIAN WAY",
+        "6920 Academy Ln"
+      ],
+      "City, state, and ZIP": [
+        "RUTHERFORDTON, NC 28139",
+        "CHARLESTON, SC 29407-7548",
+        "DANIEL ISLAND, SC 29492-7689",
+        "Lockport, NY 14094",
+        "MOUNT PLEASANT, SC 29464-9261",
+        "MT.PLEASANT, SC 29466",
+        "Portland, ME 04101",
+        "mPlete HOLLYWOOD, SC 29449"
+      ],
+      "Account number": [
+        "02-01",
+        "(HSA)",
+        "000000069112143",
+        "1000001772800",
+        "1616408",
+        "411464244",
+        "5498-SA",
+        "JENNiNGS",
+        "XXXX8340"
+      ],
+      "1 Employee or self-employed person's Archer MSA contributions made": [
+        "0.00",
+        "500.00"
+      ],
+      "2 Total contributions": [
+        "0.00",
+        "1200.00",
+        "500.00",
+        "9300.00"
+      ],
+      "3 Total HSA or Archer MSA contributions made in following year": [
+        "0.00",
+        "162.00",
+        "500.00"
+      ],
+      "4 Rollover contributions": [
+        "0.00"
+      ],
+      "5 FMV of HSA, Archer MSA, or MA MSA": [
+        "3937.51",
+        "2533.19",
+        "36531.33",
+        "52.75",
+        "888.68"
+      ],
+      "6 HSA": [
+        "Yes",
+        "No"
+      ],
+      "6 Archer MSA": [
+        "Yes",
+        "MSA,"
+      ],
+      "6 MA MSA": [
+        "1099-SA.",
+        "2024.",
+        "April 15, 2025, for 2024. You may bo able to deduct this amount on your 2024",
+        "No",
+        "Revenue Service."
+      ]
+    }
+  },
+  "stats": {
+    "form_types": 5,
+    "files": 50
+  }
+}
