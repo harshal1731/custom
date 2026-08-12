@@ -1,0 +1,36 @@
+Robo1040 Project Container steps
+
+
+build:
+
+docker compose up --build -d
+
+Curl:
+curl -s -H "X-API-Key: robo1040" \
+  -F "file=@C:\path\to\form.pdf;type=application/pdf" \
+  http://127.0.0.1:8010/api/v1/extract
+
+Logs:
+docker compose logs -f
+
+Stop Container:
+docker compose down
+
+
+Steps:
+
+1. docker build -t robo1040-ocr-api:latest .
+2. docker run -d \
+  --name robo1040-ocr-api \
+  -p 8010:8000 \
+  -e API_KEY=robo1040 \
+  -e USE_DIGITAL_PDF=true \
+  -e USE_PP_STRUCTURE=true \
+  -e USE_KIE=true \
+  -v "%cd%\models:/app/models" \
+  robo1040-ocr-api:latest
+3. docker stop robo1040-ocr-api
+docker rm robo1040-ocr-api
+
+
+ 

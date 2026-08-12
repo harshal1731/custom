@@ -1,0 +1,645 @@
+{
+  "source": "paddle_ocr",
+  "page_count": 1,
+  "markdown": "",
+  "full_text": "□\nCopy B-To Be Filed With Employee's OMBNo.1545-0008\nFEDERAL Tax Return.\na Employee's soc. sec. no. 1 Wages, tips, other comp. 2Federal income tax withheld\n104207.17 9568.85\nXXX-XX-7606\n3 Social security wages 4 Social security tax withheld\nb Employer ID number (EiN) 114878.72 7122.48\n5 Medicare wages and tips 6 Medicare tax withheld\n57-1098556 114878.72 1665.74\nc Employer's name, address, and ZiP code\nMedical University Hospital Authority\n1 Poston Road\nCharleston, Sc 29407\nd Control number\nEmployee's name, address, and ZiP code\nMargaret U Gee\n1429 BEDFORD DRIVE\nCHARLESTON, SC 29407\n7 Social security tips 8Allocated tips 9\n10Dependentcare benefits 11Nonqualifiedplans 12a Code See inst.for box 12\nC 722.40\n13Statutoryemployee 14Other 12b Code\nDD 18934.80\nRetirement plan 12c Code\nX\nThird-party sick pay 12d Code\nSC 254038928 104207.17 5238.08\n15 state Employer's state ID number 16 State wages, tips, etc. 17 State income tax\n18 Local wages, tips, etc. 19Local income tax 20 Locality name\nForm W-2 Wage and Tax Statement 2024 Dept. of the Treasury-IRS\nThis information is being furnished to the Internal Revenue Service.",
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2116,
+      "text": "□\nCopy B-To Be Filed With Employee's OMBNo.1545-0008\nFEDERAL Tax Return.\na Employee's soc. sec. no. 1 Wages, tips, other comp. 2Federal income tax withheld\n104207.17 9568.85\nXXX-XX-7606\n3 Social security wages 4 Social security tax withheld\nb Employer ID number (EiN) 114878.72 7122.48\n5 Medicare wages and tips 6 Medicare tax withheld\n57-1098556 114878.72 1665.74\nc Employer's name, address, and ZiP code\nMedical University Hospital Authority\n1 Poston Road\nCharleston, Sc 29407\nd Control number\nEmployee's name, address, and ZiP code\nMargaret U Gee\n1429 BEDFORD DRIVE\nCHARLESTON, SC 29407\n7 Social security tips 8Allocated tips 9\n10Dependentcare benefits 11Nonqualifiedplans 12a Code See inst.for box 12\nC 722.40\n13Statutoryemployee 14Other 12b Code\nDD 18934.80\nRetirement plan 12c Code\nX\nThird-party sick pay 12d Code\nSC 254038928 104207.17 5238.08\n15 state Employer's state ID number 16 State wages, tips, etc. 17 State income tax\n18 Local wages, tips, etc. 19Local income tax 20 Locality name\nForm W-2 Wage and Tax Statement 2024 Dept. of the Treasury-IRS\nThis information is being furnished to the Internal Revenue Service.",
+      "lines": [
+        "□",
+        "Copy B-To Be Filed With Employee's OMBNo.1545-0008",
+        "FEDERAL Tax Return.",
+        "a Employee's soc. sec. no. 1 Wages, tips, other comp. 2Federal income tax withheld",
+        "104207.17 9568.85",
+        "XXX-XX-7606",
+        "3 Social security wages 4 Social security tax withheld",
+        "b Employer ID number (EiN) 114878.72 7122.48",
+        "5 Medicare wages and tips 6 Medicare tax withheld",
+        "57-1098556 114878.72 1665.74",
+        "c Employer's name, address, and ZiP code",
+        "Medical University Hospital Authority",
+        "1 Poston Road",
+        "Charleston, Sc 29407",
+        "d Control number",
+        "Employee's name, address, and ZiP code",
+        "Margaret U Gee",
+        "1429 BEDFORD DRIVE",
+        "CHARLESTON, SC 29407",
+        "7 Social security tips 8Allocated tips 9",
+        "10Dependentcare benefits 11Nonqualifiedplans 12a Code See inst.for box 12",
+        "C 722.40",
+        "13Statutoryemployee 14Other 12b Code",
+        "DD 18934.80",
+        "Retirement plan 12c Code",
+        "X",
+        "Third-party sick pay 12d Code",
+        "SC 254038928 104207.17 5238.08",
+        "15 state Employer's state ID number 16 State wages, tips, etc. 17 State income tax",
+        "18 Local wages, tips, etc. 19Local income tax 20 Locality name",
+        "Form W-2 Wage and Tax Statement 2024 Dept. of the Treasury-IRS",
+        "This information is being furnished to the Internal Revenue Service."
+      ],
+      "tokens": [
+        {
+          "text": "□",
+          "confidence": 0.3119,
+          "left": 60,
+          "top": 95,
+          "right": 100,
+          "bottom": 138
+        },
+        {
+          "text": "Copy B-To Be Filed With Employee's",
+          "confidence": 0.97,
+          "left": 146,
+          "top": 177,
+          "right": 884,
+          "bottom": 234
+        },
+        {
+          "text": "OMBNo.1545-0008",
+          "confidence": 0.9962,
+          "left": 1187,
+          "top": 199,
+          "right": 1503,
+          "bottom": 246
+        },
+        {
+          "text": "FEDERAL Tax Return.",
+          "confidence": 0.9486,
+          "left": 146,
+          "top": 228,
+          "right": 574,
+          "bottom": 270
+        },
+        {
+          "text": "a Employee's soc. sec. no.",
+          "confidence": 0.8983,
+          "left": 150,
+          "top": 277,
+          "right": 565,
+          "bottom": 317
+        },
+        {
+          "text": "1 Wages, tips, other comp.",
+          "confidence": 0.9517,
+          "left": 633,
+          "top": 274,
+          "right": 1041,
+          "bottom": 314
+        },
+        {
+          "text": "2Federal income tax withheld",
+          "confidence": 0.9775,
+          "left": 1103,
+          "top": 263,
+          "right": 1560,
+          "bottom": 309
+        },
+        {
+          "text": "104207.17",
+          "confidence": 0.996,
+          "left": 809,
+          "top": 312,
+          "right": 1063,
+          "bottom": 359
+        },
+        {
+          "text": "9568.85",
+          "confidence": 0.9987,
+          "left": 1330,
+          "top": 305,
+          "right": 1531,
+          "bottom": 355
+        },
+        {
+          "text": "XXX-XX-7606",
+          "confidence": 0.9441,
+          "left": 201,
+          "top": 333,
+          "right": 511,
+          "bottom": 384
+        },
+        {
+          "text": "3 Social security wages",
+          "confidence": 0.9779,
+          "left": 631,
+          "top": 365,
+          "right": 994,
+          "bottom": 403
+        },
+        {
+          "text": "4 Social security tax withheld",
+          "confidence": 0.9774,
+          "left": 1105,
+          "top": 353,
+          "right": 1552,
+          "bottom": 402
+        },
+        {
+          "text": "114878.72",
+          "confidence": 0.997,
+          "left": 808,
+          "top": 405,
+          "right": 1064,
+          "bottom": 454
+        },
+        {
+          "text": "7122.48",
+          "confidence": 0.9982,
+          "left": 1330,
+          "top": 400,
+          "right": 1530,
+          "bottom": 448
+        },
+        {
+          "text": "b Employer ID number (EiN)",
+          "confidence": 0.911,
+          "left": 152,
+          "top": 413,
+          "right": 577,
+          "bottom": 453
+        },
+        {
+          "text": "5 Medicare wages and tips",
+          "confidence": 0.9506,
+          "left": 629,
+          "top": 453,
+          "right": 1046,
+          "bottom": 497
+        },
+        {
+          "text": "6 Medicare tax withheld",
+          "confidence": 0.9735,
+          "left": 1107,
+          "top": 447,
+          "right": 1474,
+          "bottom": 489
+        },
+        {
+          "text": "57-1098556",
+          "confidence": 0.998,
+          "left": 215,
+          "top": 476,
+          "right": 496,
+          "bottom": 522
+        },
+        {
+          "text": "114878.72",
+          "confidence": 0.9986,
+          "left": 810,
+          "top": 492,
+          "right": 1064,
+          "bottom": 541
+        },
+        {
+          "text": "1665.74",
+          "confidence": 0.9989,
+          "left": 1332,
+          "top": 486,
+          "right": 1531,
+          "bottom": 535
+        },
+        {
+          "text": "c Employer's name, address, and ZiP code",
+          "confidence": 0.9337,
+          "left": 153,
+          "top": 545,
+          "right": 807,
+          "bottom": 591
+        },
+        {
+          "text": "Medical University Hospital Authority",
+          "confidence": 0.9812,
+          "left": 187,
+          "top": 579,
+          "right": 1217,
+          "bottom": 637
+        },
+        {
+          "text": "1 Poston Road",
+          "confidence": 0.9847,
+          "left": 192,
+          "top": 644,
+          "right": 561,
+          "bottom": 690
+        },
+        {
+          "text": "Charleston, Sc 29407",
+          "confidence": 0.9521,
+          "left": 191,
+          "top": 695,
+          "right": 751,
+          "bottom": 754
+        },
+        {
+          "text": "d Control number",
+          "confidence": 0.9435,
+          "left": 158,
+          "top": 823,
+          "right": 429,
+          "bottom": 860
+        },
+        {
+          "text": "Employee's name, address, and ZiP code",
+          "confidence": 0.9202,
+          "left": 185,
+          "top": 908,
+          "right": 813,
+          "bottom": 952
+        },
+        {
+          "text": "Margaret U Gee",
+          "confidence": 0.9843,
+          "left": 199,
+          "top": 945,
+          "right": 598,
+          "bottom": 993
+        },
+        {
+          "text": "1429 BEDFORD DRIVE",
+          "confidence": 0.9686,
+          "left": 203,
+          "top": 995,
+          "right": 708,
+          "bottom": 1042
+        },
+        {
+          "text": "CHARLESTON, SC 29407",
+          "confidence": 0.9363,
+          "left": 202,
+          "top": 1050,
+          "right": 760,
+          "bottom": 1104
+        },
+        {
+          "text": "7 Social security tips",
+          "confidence": 0.9549,
+          "left": 154,
+          "top": 1185,
+          "right": 477,
+          "bottom": 1228
+        },
+        {
+          "text": "8Allocated tips",
+          "confidence": 0.9656,
+          "left": 629,
+          "top": 1180,
+          "right": 879,
+          "bottom": 1223
+        },
+        {
+          "text": "9",
+          "confidence": 0.9921,
+          "left": 1111,
+          "top": 1181,
+          "right": 1144,
+          "bottom": 1216
+        },
+        {
+          "text": "10Dependentcare benefits",
+          "confidence": 0.9803,
+          "left": 142,
+          "top": 1274,
+          "right": 562,
+          "bottom": 1318
+        },
+        {
+          "text": "11Nonqualifiedplans",
+          "confidence": 0.9827,
+          "left": 619,
+          "top": 1274,
+          "right": 949,
+          "bottom": 1311
+        },
+        {
+          "text": "12a Code See inst.for box 12",
+          "confidence": 0.9392,
+          "left": 1096,
+          "top": 1266,
+          "right": 1559,
+          "bottom": 1308
+        },
+        {
+          "text": "C",
+          "confidence": 0.7155,
+          "left": 1124,
+          "top": 1307,
+          "right": 1165,
+          "bottom": 1352
+        },
+        {
+          "text": "722.40",
+          "confidence": 0.9989,
+          "left": 1384,
+          "top": 1305,
+          "right": 1541,
+          "bottom": 1348
+        },
+        {
+          "text": "13Statutoryemployee",
+          "confidence": 0.9935,
+          "left": 141,
+          "top": 1369,
+          "right": 491,
+          "bottom": 1410
+        },
+        {
+          "text": "14Other",
+          "confidence": 0.9963,
+          "left": 498,
+          "top": 1362,
+          "right": 651,
+          "bottom": 1407
+        },
+        {
+          "text": "12b Code",
+          "confidence": 0.9643,
+          "left": 1096,
+          "top": 1361,
+          "right": 1255,
+          "bottom": 1400
+        },
+        {
+          "text": "DD",
+          "confidence": 0.9962,
+          "left": 1124,
+          "top": 1398,
+          "right": 1189,
+          "bottom": 1443
+        },
+        {
+          "text": "18934.80",
+          "confidence": 0.9992,
+          "left": 1337,
+          "top": 1395,
+          "right": 1538,
+          "bottom": 1440
+        },
+        {
+          "text": "Retirement plan",
+          "confidence": 0.9948,
+          "left": 201,
+          "top": 1460,
+          "right": 443,
+          "bottom": 1502
+        },
+        {
+          "text": "12c Code",
+          "confidence": 0.9662,
+          "left": 1096,
+          "top": 1451,
+          "right": 1254,
+          "bottom": 1490
+        },
+        {
+          "text": "X",
+          "confidence": 0.7198,
+          "left": 287,
+          "top": 1497,
+          "right": 334,
+          "bottom": 1542
+        },
+        {
+          "text": "Third-party sick pay",
+          "confidence": 0.9806,
+          "left": 168,
+          "top": 1550,
+          "right": 472,
+          "bottom": 1595
+        },
+        {
+          "text": "12d Code",
+          "confidence": 0.9492,
+          "left": 1095,
+          "top": 1543,
+          "right": 1257,
+          "bottom": 1585
+        },
+        {
+          "text": "SC",
+          "confidence": 0.8765,
+          "left": 181,
+          "top": 1674,
+          "right": 254,
+          "bottom": 1727
+        },
+        {
+          "text": "254038928",
+          "confidence": 0.9992,
+          "left": 277,
+          "top": 1671,
+          "right": 541,
+          "bottom": 1725
+        },
+        {
+          "text": "104207.17",
+          "confidence": 0.9989,
+          "left": 851,
+          "top": 1667,
+          "right": 1103,
+          "bottom": 1716
+        },
+        {
+          "text": "5238.08",
+          "confidence": 0.9994,
+          "left": 1356,
+          "top": 1664,
+          "right": 1558,
+          "bottom": 1715
+        },
+        {
+          "text": "15 state Employer's state ID number 16 State wages, tips, etc.",
+          "confidence": 0.9467,
+          "left": 135,
+          "top": 1727,
+          "right": 1083,
+          "bottom": 1779
+        },
+        {
+          "text": "17 State income tax",
+          "confidence": 0.9617,
+          "left": 1130,
+          "top": 1727,
+          "right": 1443,
+          "bottom": 1768
+        },
+        {
+          "text": "18 Local wages, tips, etc.",
+          "confidence": 0.946,
+          "left": 136,
+          "top": 1781,
+          "right": 527,
+          "bottom": 1825
+        },
+        {
+          "text": "19Local income tax",
+          "confidence": 0.9586,
+          "left": 616,
+          "top": 1780,
+          "right": 929,
+          "bottom": 1817
+        },
+        {
+          "text": "20 Locality name",
+          "confidence": 0.9504,
+          "left": 1094,
+          "top": 1775,
+          "right": 1365,
+          "bottom": 1820
+        },
+        {
+          "text": "2024",
+          "confidence": 0.9969,
+          "left": 864,
+          "top": 1915,
+          "right": 1012,
+          "bottom": 1970
+        },
+        {
+          "text": "Form W-2 Wage and Tax Statement",
+          "confidence": 0.9495,
+          "left": 127,
+          "top": 1923,
+          "right": 725,
+          "bottom": 1970
+        },
+        {
+          "text": "Dept. of the Treasury-IRS",
+          "confidence": 0.9289,
+          "left": 1178,
+          "top": 1918,
+          "right": 1587,
+          "bottom": 1962
+        },
+        {
+          "text": "This information is being furnished to the Internal Revenue Service.",
+          "confidence": 0.9404,
+          "left": 132,
+          "top": 1968,
+          "right": 1062,
+          "bottom": 2012
+        }
+      ],
+      "layout_regions": []
+    }
+  ],
+  "kie_pairs": [
+    {
+      "field_key": "Year",
+      "label": "Form W-2",
+      "value": "2024",
+      "confidence": 0.9172,
+      "method": "spatial"
+    },
+    {
+      "field_key": "Employee's social security number",
+      "label": "Employee's social security number",
+      "value": "XXX-XX-7606",
+      "confidence": 0.8025,
+      "method": "spatial"
+    },
+    {
+      "field_key": "Employer identification number (EIN)",
+      "label": "Employer identification number (EIN)",
+      "value": "57-1098556",
+      "confidence": 0.8483,
+      "method": "spatial"
+    },
+    {
+      "field_key": "Control number",
+      "label": "Control number",
+      "value": "722.40",
+      "confidence": 0.9189,
+      "method": "spatial"
+    },
+    {
+      "field_key": "1 Wages, tips, other compensation",
+      "label": "1 Wages, tips, other compensation",
+      "value": "114878.72",
+      "confidence": 0.8475,
+      "method": "spatial"
+    },
+    {
+      "field_key": "2 Federal income tax withheld",
+      "label": "2 Federal income tax withheld",
+      "value": "9568.85",
+      "confidence": 0.8489,
+      "method": "spatial"
+    },
+    {
+      "field_key": "4 Social security tax withheld",
+      "label": "4 Social security tax withheld",
+      "value": "7122.48",
+      "confidence": 0.8485,
+      "method": "spatial"
+    },
+    {
+      "field_key": "5 Medicare wages and tips",
+      "label": "5 Medicare wages and tips",
+      "value": "104207.17",
+      "confidence": 0.849,
+      "method": "spatial"
+    },
+    {
+      "field_key": "6 Medicare tax withheld",
+      "label": "6 Medicare tax withheld",
+      "value": "1665.74",
+      "confidence": 0.8491,
+      "method": "spatial"
+    },
+    {
+      "field_key": "12a Code/Amount",
+      "label": "12a Code",
+      "value": "20 Locality name",
+      "confidence": 0.8078,
+      "method": "spatial"
+    },
+    {
+      "field_key": "12b Code/Amount",
+      "label": "12b Code",
+      "value": "Form W-2 Wage and Tax Statement",
+      "confidence": 0.807,
+      "method": "spatial"
+    },
+    {
+      "field_key": "13 Retirement plan",
+      "label": "Retirement plan",
+      "value": "12c Code",
+      "confidence": 0.8889,
+      "method": "spatial"
+    },
+    {
+      "field_key": "13 Third-party sick pay",
+      "label": "Third-party sick pay",
+      "value": "12d Code",
+      "confidence": 0.8733,
+      "method": "spatial"
+    },
+    {
+      "field_key": "14 Other",
+      "label": "14 Other",
+      "value": "2Federal income tax withheld",
+      "confidence": 0.8993,
+      "method": "spatial"
+    },
+    {
+      "field_key": "15 State / Employer's state ID number",
+      "label": "15 State Employer's state ID number",
+      "value": "17 State income tax",
+      "confidence": 0.8848,
+      "method": "spatial"
+    },
+    {
+      "field_key": "20 Locality name",
+      "label": "20 Locality name",
+      "value": "Dept. of the Treasury-IRS",
+      "confidence": 0.7896,
+      "method": "spatial"
+    }
+  ]
+}

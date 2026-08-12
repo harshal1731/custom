@@ -1,0 +1,581 @@
+{
+  "source": "paddle_ocr",
+  "page_count": 1,
+  "markdown": "",
+  "full_text": "a Employee's social security number This information is being furnished to the Internal Revenue Service. If you\nOMB No. 1545-0008 may be imposed on you if this income is taxable and you fail to report it. are required to file a tax return, a negligence penalty or other sanction'\nb Employer identification number (EIN) 1 Wages, tips, other compensation 2 Federal income tax withheld\nc Employer's name, address, and ZIP code 3 Social security wages 4 Social security tax withheld\n5 Medicare wages and tips 6 Medicare tax withheld\n7 Social security tips 8 Allocated tips\nd Control number 9 10 Dependent care benefits\ne Employee's first name and initial Last name Suff. 11 Nonqualified plans 12a See instructions for box 12\ncode\n13 Statutory employee Retirement plan sick pay Third-party 12b\ncode\n14 Other\n12d\nCode\nf Employee's address and ZIP code\n15 State Employer's state ID number 16 State wages, tips, etc. 17 State income tax 18 Local wages, tips, etc. 19 Local income tax 20Locality name\nForm W-2 Wage and Tax Statement Department of the Treasury—Internal Revenue Service\nCopy C-For EMPLOYEE'S RECORDS FAST! Use Safe, accurate, IRSe N file\n(See Notice to Employee on the back of Copy B.)",
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1653,
+      "height": 2139,
+      "text": "a Employee's social security number This information is being furnished to the Internal Revenue Service. If you\nOMB No. 1545-0008 may be imposed on you if this income is taxable and you fail to report it. are required to file a tax return, a negligence penalty or other sanction'\nb Employer identification number (EIN) 1 Wages, tips, other compensation 2 Federal income tax withheld\nc Employer's name, address, and ZIP code 3 Social security wages 4 Social security tax withheld\n5 Medicare wages and tips 6 Medicare tax withheld\n7 Social security tips 8 Allocated tips\nd Control number 9 10 Dependent care benefits\ne Employee's first name and initial Last name Suff. 11 Nonqualified plans 12a See instructions for box 12\ncode\n13 Statutory employee Retirement plan sick pay Third-party 12b\ncode\n14 Other\n12d\nCode\nf Employee's address and ZIP code\n15 State Employer's state ID number 16 State wages, tips, etc. 17 State income tax 18 Local wages, tips, etc. 19 Local income tax 20Locality name\nForm W-2 Wage and Tax Statement Department of the Treasury—Internal Revenue Service\nCopy C-For EMPLOYEE'S RECORDS FAST! Use Safe, accurate, IRSe N file\n(See Notice to Employee on the back of Copy B.)",
+      "lines": [
+        "a Employee's social security number This information is being furnished to the Internal Revenue Service. If you",
+        "OMB No. 1545-0008 may be imposed on you if this income is taxable and you fail to report it. are required to file a tax return, a negligence penalty or other sanction'",
+        "b Employer identification number (EIN) 1 Wages, tips, other compensation 2 Federal income tax withheld",
+        "c Employer's name, address, and ZIP code 3 Social security wages 4 Social security tax withheld",
+        "5 Medicare wages and tips 6 Medicare tax withheld",
+        "7 Social security tips 8 Allocated tips",
+        "d Control number 9 10 Dependent care benefits",
+        "e Employee's first name and initial Last name Suff. 11 Nonqualified plans 12a See instructions for box 12",
+        "code",
+        "13 Statutory employee Retirement plan sick pay Third-party 12b",
+        "code",
+        "14 Other",
+        "12d",
+        "Code",
+        "f Employee's address and ZIP code",
+        "15 State Employer's state ID number 16 State wages, tips, etc. 17 State income tax 18 Local wages, tips, etc. 19 Local income tax 20Locality name",
+        "Form W-2 Wage and Tax Statement Department of the Treasury—Internal Revenue Service",
+        "Copy C-For EMPLOYEE'S RECORDS FAST! Use Safe, accurate, IRSe N file",
+        "(See Notice to Employee on the back of Copy B.)"
+      ],
+      "tokens": [
+        {
+          "text": "a Employee's social security number",
+          "confidence": 0.9959,
+          "left": 421,
+          "top": 100,
+          "right": 742,
+          "bottom": 123
+        },
+        {
+          "text": "This information is being furnished to the Internal Revenue Service. If you",
+          "confidence": 0.9799,
+          "left": 970,
+          "top": 98,
+          "right": 1549,
+          "bottom": 123
+        },
+        {
+          "text": "are required to file a tax return, a negligence penalty or other sanction'",
+          "confidence": 0.957,
+          "left": 969,
+          "top": 117,
+          "right": 1522,
+          "bottom": 142
+        },
+        {
+          "text": "OMB No. 1545-0008",
+          "confidence": 0.959,
+          "left": 773,
+          "top": 130,
+          "right": 952,
+          "bottom": 151
+        },
+        {
+          "text": "may be imposed on you if this income is taxable and you fail to report it.",
+          "confidence": 0.9709,
+          "left": 968,
+          "top": 135,
+          "right": 1540,
+          "bottom": 160
+        },
+        {
+          "text": "b Employer identification number (EIN)",
+          "confidence": 0.9817,
+          "left": 108,
+          "top": 164,
+          "right": 444,
+          "bottom": 189
+        },
+        {
+          "text": "1 Wages, tips, other compensation",
+          "confidence": 0.9726,
+          "left": 910,
+          "top": 163,
+          "right": 1198,
+          "bottom": 189
+        },
+        {
+          "text": "2 Federal income tax withheld",
+          "confidence": 0.9787,
+          "left": 1239,
+          "top": 164,
+          "right": 1512,
+          "bottom": 187
+        },
+        {
+          "text": "c Employer's name, address, and ZIP code",
+          "confidence": 0.965,
+          "left": 111,
+          "top": 231,
+          "right": 485,
+          "bottom": 251
+        },
+        {
+          "text": "3 Social security wages",
+          "confidence": 0.9625,
+          "left": 909,
+          "top": 227,
+          "right": 1126,
+          "bottom": 253
+        },
+        {
+          "text": "4 Social security tax withheld",
+          "confidence": 0.9788,
+          "left": 1240,
+          "top": 229,
+          "right": 1503,
+          "bottom": 252
+        },
+        {
+          "text": "5 Medicare wages and tips",
+          "confidence": 0.9835,
+          "left": 909,
+          "top": 293,
+          "right": 1154,
+          "bottom": 318
+        },
+        {
+          "text": "6 Medicare tax withheld",
+          "confidence": 0.9889,
+          "left": 1242,
+          "top": 294,
+          "right": 1459,
+          "bottom": 315
+        },
+        {
+          "text": "7 Social security tips",
+          "confidence": 0.966,
+          "left": 909,
+          "top": 357,
+          "right": 1103,
+          "bottom": 383
+        },
+        {
+          "text": "8 Allocated tips",
+          "confidence": 0.9556,
+          "left": 1239,
+          "top": 357,
+          "right": 1389,
+          "bottom": 383
+        },
+        {
+          "text": "d Control number",
+          "confidence": 0.9481,
+          "left": 108,
+          "top": 421,
+          "right": 270,
+          "bottom": 447
+        },
+        {
+          "text": "9",
+          "confidence": 0.9985,
+          "left": 909,
+          "top": 422,
+          "right": 935,
+          "bottom": 452
+        },
+        {
+          "text": "10",
+          "confidence": 0.9986,
+          "left": 1236,
+          "top": 426,
+          "right": 1263,
+          "bottom": 444
+        },
+        {
+          "text": "Dependent care benefits",
+          "confidence": 0.9959,
+          "left": 1268,
+          "top": 425,
+          "right": 1481,
+          "bottom": 445
+        },
+        {
+          "text": "e Employee's first name and initial",
+          "confidence": 0.9892,
+          "left": 109,
+          "top": 489,
+          "right": 408,
+          "bottom": 511
+        },
+        {
+          "text": "Last name",
+          "confidence": 0.9818,
+          "left": 473,
+          "top": 488,
+          "right": 569,
+          "bottom": 512
+        },
+        {
+          "text": "Suff.",
+          "confidence": 0.9989,
+          "left": 840,
+          "top": 486,
+          "right": 888,
+          "bottom": 513
+        },
+        {
+          "text": "11",
+          "confidence": 0.9983,
+          "left": 902,
+          "top": 489,
+          "right": 931,
+          "bottom": 510
+        },
+        {
+          "text": "Nonqualified plans",
+          "confidence": 0.9909,
+          "left": 935,
+          "top": 487,
+          "right": 1103,
+          "bottom": 513
+        },
+        {
+          "text": "12a",
+          "confidence": 0.9991,
+          "left": 1235,
+          "top": 490,
+          "right": 1277,
+          "bottom": 509
+        },
+        {
+          "text": "See instructions for box 12",
+          "confidence": 0.9799,
+          "left": 1268,
+          "top": 489,
+          "right": 1506,
+          "bottom": 510
+        },
+        {
+          "text": "code",
+          "confidence": 0.7918,
+          "left": 1234,
+          "top": 505,
+          "right": 1248,
+          "bottom": 548
+        },
+        {
+          "text": "13",
+          "confidence": 0.9975,
+          "left": 900,
+          "top": 552,
+          "right": 932,
+          "bottom": 577
+        },
+        {
+          "text": "Statutory",
+          "confidence": 0.9973,
+          "left": 936,
+          "top": 547,
+          "right": 1002,
+          "bottom": 571
+        },
+        {
+          "text": "Retirement",
+          "confidence": 0.999,
+          "left": 1034,
+          "top": 550,
+          "right": 1109,
+          "bottom": 570
+        },
+        {
+          "text": "Third-party",
+          "confidence": 0.9998,
+          "left": 1132,
+          "top": 550,
+          "right": 1205,
+          "bottom": 570
+        },
+        {
+          "text": "sick pay",
+          "confidence": 0.9775,
+          "left": 1129,
+          "top": 561,
+          "right": 1190,
+          "bottom": 586
+        },
+        {
+          "text": "12b",
+          "confidence": 0.9965,
+          "left": 1232,
+          "top": 553,
+          "right": 1272,
+          "bottom": 577
+        },
+        {
+          "text": "employee",
+          "confidence": 0.9997,
+          "left": 937,
+          "top": 566,
+          "right": 1003,
+          "bottom": 584
+        },
+        {
+          "text": "plan",
+          "confidence": 0.9988,
+          "left": 1034,
+          "top": 566,
+          "right": 1069,
+          "bottom": 584
+        },
+        {
+          "text": "code",
+          "confidence": 0.6743,
+          "left": 1233,
+          "top": 569,
+          "right": 1248,
+          "bottom": 615
+        },
+        {
+          "text": "14 Other",
+          "confidence": 0.9588,
+          "left": 901,
+          "top": 618,
+          "right": 987,
+          "bottom": 642
+        },
+        {
+          "text": "12d",
+          "confidence": 0.9939,
+          "left": 1232,
+          "top": 682,
+          "right": 1273,
+          "bottom": 706
+        },
+        {
+          "text": "Code",
+          "confidence": 0.6899,
+          "left": 1233,
+          "top": 700,
+          "right": 1248,
+          "bottom": 743
+        },
+        {
+          "text": "f Employee's address and ZIP code",
+          "confidence": 0.9742,
+          "left": 108,
+          "top": 747,
+          "right": 421,
+          "bottom": 770
+        },
+        {
+          "text": "15 State",
+          "confidence": 0.9556,
+          "left": 100,
+          "top": 781,
+          "right": 175,
+          "bottom": 802
+        },
+        {
+          "text": "Employer's state ID number",
+          "confidence": 0.9947,
+          "left": 184,
+          "top": 781,
+          "right": 427,
+          "bottom": 802
+        },
+        {
+          "text": "16 State wages, tips, etc.",
+          "confidence": 0.9935,
+          "left": 531,
+          "top": 781,
+          "right": 755,
+          "bottom": 802
+        },
+        {
+          "text": "17 State income tax",
+          "confidence": 0.9809,
+          "left": 763,
+          "top": 781,
+          "right": 943,
+          "bottom": 802
+        },
+        {
+          "text": "18 Local wages, tips, etc.",
+          "confidence": 0.9759,
+          "left": 978,
+          "top": 781,
+          "right": 1202,
+          "bottom": 802
+        },
+        {
+          "text": "19 Local income tax",
+          "confidence": 0.9785,
+          "left": 1210,
+          "top": 779,
+          "right": 1392,
+          "bottom": 802
+        },
+        {
+          "text": "20Locality name",
+          "confidence": 0.965,
+          "left": 1421,
+          "top": 778,
+          "right": 1554,
+          "bottom": 804
+        },
+        {
+          "text": "W-2",
+          "confidence": 0.9971,
+          "left": 150,
+          "top": 914,
+          "right": 271,
+          "bottom": 975
+        },
+        {
+          "text": "Wage and Tax Statement",
+          "confidence": 0.9885,
+          "left": 280,
+          "top": 924,
+          "right": 632,
+          "bottom": 971
+        },
+        {
+          "text": "Department of the Treasury—Internal Revenue Service",
+          "confidence": 0.991,
+          "left": 1095,
+          "top": 923,
+          "right": 1558,
+          "bottom": 946
+        },
+        {
+          "text": "Form",
+          "confidence": 0.9979,
+          "left": 92,
+          "top": 948,
+          "right": 148,
+          "bottom": 973
+        },
+        {
+          "text": "Safe, accurate,",
+          "confidence": 0.9936,
+          "left": 1184,
+          "top": 954,
+          "right": 1327,
+          "bottom": 980
+        },
+        {
+          "text": "IRSe",
+          "confidence": 0.7136,
+          "left": 1339,
+          "top": 960,
+          "right": 1408,
+          "bottom": 998
+        },
+        {
+          "text": "file",
+          "confidence": 0.9786,
+          "left": 1434,
+          "top": 957,
+          "right": 1537,
+          "bottom": 1001
+        },
+        {
+          "text": "Copy C-For EMPLOYEE'S RECORDS",
+          "confidence": 0.9454,
+          "left": 95,
+          "top": 982,
+          "right": 490,
+          "bottom": 1006
+        },
+        {
+          "text": "FAST! Use",
+          "confidence": 0.9452,
+          "left": 1183,
+          "top": 976,
+          "right": 1291,
+          "bottom": 1003
+        },
+        {
+          "text": "N",
+          "confidence": 0.5038,
+          "left": 1411,
+          "top": 967,
+          "right": 1435,
+          "bottom": 990
+        },
+        {
+          "text": "(See Notice to Employee on the back of Copy B.)",
+          "confidence": 0.969,
+          "left": 93,
+          "top": 1007,
+          "right": 572,
+          "bottom": 1035
+        }
+      ],
+      "layout_regions": []
+    }
+  ],
+  "kie_pairs": [
+    {
+      "field_key": "Control number",
+      "label": "Control number",
+      "value": "9",
+      "confidence": 0.9186,
+      "method": "spatial"
+    },
+    {
+      "field_key": "Employee's first name and initial",
+      "label": "Employee's first name and initial",
+      "value": "plan",
+      "confidence": 0.9189,
+      "method": "spatial"
+    },
+    {
+      "field_key": "Suff.",
+      "label": "Suff",
+      "value": "11",
+      "confidence": 0.9184,
+      "method": "spatial"
+    },
+    {
+      "field_key": "12a Code/Amount",
+      "label": "12a Code",
+      "value": "See instructions for box 12",
+      "confidence": 0.9015,
+      "method": "spatial"
+    },
+    {
+      "field_key": "12b Code/Amount",
+      "label": "12b Code",
+      "value": "18 Local wages, tips, etc.",
+      "confidence": 0.8296,
+      "method": "spatial"
+    },
+    {
+      "field_key": "13 Statutory employee",
+      "label": "Statutory employee",
+      "value": "Retirement",
+      "confidence": 0.9191,
+      "method": "spatial"
+    },
+    {
+      "field_key": "13 Retirement plan",
+      "label": "Retirement plan",
+      "value": "file",
+      "confidence": 0.9003,
+      "method": "spatial"
+    },
+    {
+      "field_key": "13 Third-party sick pay",
+      "label": "Third-party sick pay",
+      "value": "12b",
+      "confidence": 0.9168,
+      "method": "spatial"
+    },
+    {
+      "field_key": "14 Other",
+      "label": "14 Other",
+      "value": "2 Federal income tax withheld",
+      "confidence": 0.9004,
+      "method": "spatial"
+    },
+    {
+      "field_key": "15 State / Employer's state ID number",
+      "label": "15 State Employer's state ID number",
+      "value": "Employer's state ID number",
+      "confidence": 0.9152,
+      "method": "spatial"
+    },
+    {
+      "field_key": "20 Locality name",
+      "label": "20 Locality name",
+      "value": "Department of the Treasury—Internal Revenue Service",
+      "confidence": 0.8424,
+      "method": "spatial"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "form_type": "W-2",
+  "confidence": 1.0,
+  "processing_ms": 10016,
+  "page_count": 1,
+  "extraction_source": "paddle_ocr",
+  "fields": {
+    "Employee's social security number": null,
+    "Employer identification number (EIN)": null,
+    "12a Code/Amount": null,
+    "12b Code/Amount": null,
+    "12c Code/Amount": null,
+    "12d Code/Amount": null,
+    "13 Retirement plan": null,
+    "15 State / Employer's state ID number": null,
+    "Control number": null,
+    "Employer's name, address, and ZIP code": null,
+    "Employee's first name and initial": null,
+    "Last name": null,
+    "Suff.": "code",
+    "Employee's address and ZIP code": null,
+    "Year": "2024"
+  },
+  "field_confidence": {
+    "Employee's social security number": 0.0,
+    "Employer identification number (EIN)": 0.0,
+    "12a Code/Amount": 0.0,
+    "12b Code/Amount": 0.0,
+    "12c Code/Amount": 0.0,
+    "12d Code/Amount": 0.0,
+    "13 Retirement plan": 0.0,
+    "15 State / Employer's state ID number": 0.0,
+    "Control number": 0.0,
+    "Employer's name, address, and ZIP code": 0.0,
+    "Employee's first name and initial": 0.0,
+    "Last name": 0.0,
+    "Suff.": 0.898,
+    "Employee's address and ZIP code": 0.0,
+    "Year": 0.95
+  },
+  "raw_text_preview": "a Employee's social security number This information is being furnished to the Internal Revenue Service. If you OMB No. 1545-0008 may be imposed on you if this income is taxable and you fail to report it. are required to file a tax return, a negligence penalty or other sanction' b Employer identification number (EIN) 1 Wages, tips, other compensation 2 Federal income tax withheld c Employer's name, address, and ZIP code 3 Social security wages 4 Social security tax withheld 5 Medicare wages and ..."
+}

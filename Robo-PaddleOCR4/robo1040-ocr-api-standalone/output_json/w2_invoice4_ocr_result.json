@@ -1,0 +1,1303 @@
+{
+  "source": "digital_pdf",
+  "page_count": 1,
+  "markdown": "",
+  "full_text": "a Employee's soc. sec. no. 1 Wages, tips, other comp. 2 Federal income tax withheld\na Employee's soc. sec. no. 1 Wages, tips, other comp. 2 Federal income tax withheld\nXXX-XX-7190 3 Social security wages 161764.56 4 Social security tax withheld 20465.79\nXXX-XX-7190 3 Social security wages 161764.56 4 Social security tax withheld 20465.79\nb Employer ID number (EIN) 145982.65 9050.93\n57-0935917 5 Medicare wages and tips 161764.56 6 Medicare tax withheld 2345.60\nc Employer's name, address, and ZIP code\nUMA Common Paymaster, 1 Poston Road, Suite 350, Charleston, SC 29407\ne Employee's name, address, and ZIP code\nJohn R Freedy, 872 Parrot Creek Way, CHARLESTON, SC 29412\n12a Code C 1584.00\n13 Retirement plan X\n15 Employer's state ID number SC 25285895-6 16 State wages, tips, etc. 161764.56 17 State income tax 7170.09\nForm W-2 Wage and Tax Statement 2024",
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1653,
+      "height": 2139,
+      "text": "a Employee's soc. sec. no. 1 Wages, tips, other comp. 2 Federal income tax withheld\na Employee's soc. sec. no. 1 Wages, tips, other comp. 2 Federal income tax withheld\nXXX-XX-7190 3 Social security wages 161764.56 4 Social security tax withheld 20465.79\nXXX-XX-7190 3 Social security wages 161764.56 4 Social security tax withheld 20465.79\nb Employer ID number (EIN) 145982.65 9050.93\n57-0935917 5 Medicare wages and tips 161764.56 6 Medicare tax withheld 2345.60\nc Employer's name, address, and ZIP code\nUMA Common Paymaster, 1 Poston Road, Suite 350, Charleston, SC 29407\ne Employee's name, address, and ZIP code\nJohn R Freedy, 872 Parrot Creek Way, CHARLESTON, SC 29412\n12a Code C 1584.00\n13 Retirement plan X\n15 Employer's state ID number SC 25285895-6 16 State wages, tips, etc. 161764.56 17 State income tax 7170.09\nForm W-2 Wage and Tax Statement 2024",
+      "lines": [
+        "a Employee's soc. sec. no. 1 Wages, tips, other comp. 2 Federal income tax withheld",
+        "a Employee's soc. sec. no. 1 Wages, tips, other comp. 2 Federal income tax withheld",
+        "XXX-XX-7190 3 Social security wages 161764.56 4 Social security tax withheld 20465.79",
+        "XXX-XX-7190 3 Social security wages 161764.56 4 Social security tax withheld 20465.79",
+        "b Employer ID number (EIN) 145982.65 9050.93",
+        "57-0935917 5 Medicare wages and tips 161764.56 6 Medicare tax withheld 2345.60",
+        "c Employer's name, address, and ZIP code",
+        "UMA Common Paymaster, 1 Poston Road, Suite 350, Charleston, SC 29407",
+        "e Employee's name, address, and ZIP code",
+        "John R Freedy, 872 Parrot Creek Way, CHARLESTON, SC 29412",
+        "12a Code C 1584.00",
+        "13 Retirement plan X",
+        "15 Employer's state ID number SC 25285895-6 16 State wages, tips, etc. 161764.56 17 State income tax 7170.09",
+        "Form W-2 Wage and Tax Statement 2024"
+      ],
+      "tokens": [
+        {
+          "text": "a",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 88,
+          "right": 56,
+          "bottom": 103
+        },
+        {
+          "text": "Employee's",
+          "confidence": 1.0,
+          "left": 59,
+          "top": 88,
+          "right": 115,
+          "bottom": 103
+        },
+        {
+          "text": "soc.",
+          "confidence": 1.0,
+          "left": 118,
+          "top": 88,
+          "right": 138,
+          "bottom": 103
+        },
+        {
+          "text": "sec.",
+          "confidence": 1.0,
+          "left": 141,
+          "top": 88,
+          "right": 162,
+          "bottom": 103
+        },
+        {
+          "text": "no.",
+          "confidence": 1.0,
+          "left": 165,
+          "top": 88,
+          "right": 180,
+          "bottom": 103
+        },
+        {
+          "text": "1",
+          "confidence": 1.0,
+          "left": 183,
+          "top": 88,
+          "right": 189,
+          "bottom": 103
+        },
+        {
+          "text": "Wages,",
+          "confidence": 1.0,
+          "left": 192,
+          "top": 88,
+          "right": 230,
+          "bottom": 103
+        },
+        {
+          "text": "tips,",
+          "confidence": 1.0,
+          "left": 233,
+          "top": 88,
+          "right": 253,
+          "bottom": 103
+        },
+        {
+          "text": "other",
+          "confidence": 1.0,
+          "left": 256,
+          "top": 88,
+          "right": 281,
+          "bottom": 103
+        },
+        {
+          "text": "comp.",
+          "confidence": 1.0,
+          "left": 284,
+          "top": 88,
+          "right": 314,
+          "bottom": 103
+        },
+        {
+          "text": "2",
+          "confidence": 1.0,
+          "left": 317,
+          "top": 88,
+          "right": 323,
+          "bottom": 103
+        },
+        {
+          "text": "Federal",
+          "confidence": 1.0,
+          "left": 326,
+          "top": 88,
+          "right": 363,
+          "bottom": 103
+        },
+        {
+          "text": "income",
+          "confidence": 1.0,
+          "left": 366,
+          "top": 88,
+          "right": 402,
+          "bottom": 103
+        },
+        {
+          "text": "tax",
+          "confidence": 1.0,
+          "left": 405,
+          "top": 88,
+          "right": 420,
+          "bottom": 103
+        },
+        {
+          "text": "withheld",
+          "confidence": 1.0,
+          "left": 423,
+          "top": 88,
+          "right": 463,
+          "bottom": 103
+        },
+        {
+          "text": "XXX-XX-7190",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 128,
+          "right": 118,
+          "bottom": 143
+        },
+        {
+          "text": "3",
+          "confidence": 1.0,
+          "left": 121,
+          "top": 128,
+          "right": 127,
+          "bottom": 143
+        },
+        {
+          "text": "Social",
+          "confidence": 1.0,
+          "left": 130,
+          "top": 128,
+          "right": 160,
+          "bottom": 143
+        },
+        {
+          "text": "security",
+          "confidence": 1.0,
+          "left": 163,
+          "top": 128,
+          "right": 201,
+          "bottom": 143
+        },
+        {
+          "text": "wages",
+          "confidence": 1.0,
+          "left": 204,
+          "top": 128,
+          "right": 236,
+          "bottom": 143
+        },
+        {
+          "text": "161764.56",
+          "confidence": 1.0,
+          "left": 239,
+          "top": 128,
+          "right": 291,
+          "bottom": 143
+        },
+        {
+          "text": "4",
+          "confidence": 1.0,
+          "left": 294,
+          "top": 128,
+          "right": 300,
+          "bottom": 143
+        },
+        {
+          "text": "Social",
+          "confidence": 1.0,
+          "left": 303,
+          "top": 128,
+          "right": 333,
+          "bottom": 143
+        },
+        {
+          "text": "security",
+          "confidence": 1.0,
+          "left": 336,
+          "top": 128,
+          "right": 374,
+          "bottom": 143
+        },
+        {
+          "text": "tax",
+          "confidence": 1.0,
+          "left": 377,
+          "top": 128,
+          "right": 392,
+          "bottom": 143
+        },
+        {
+          "text": "withheld",
+          "confidence": 1.0,
+          "left": 395,
+          "top": 128,
+          "right": 435,
+          "bottom": 143
+        },
+        {
+          "text": "20465.79",
+          "confidence": 1.0,
+          "left": 438,
+          "top": 128,
+          "right": 484,
+          "bottom": 143
+        },
+        {
+          "text": "b",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 188,
+          "right": 56,
+          "bottom": 203
+        },
+        {
+          "text": "Employer",
+          "confidence": 1.0,
+          "left": 59,
+          "top": 188,
+          "right": 105,
+          "bottom": 203
+        },
+        {
+          "text": "ID",
+          "confidence": 1.0,
+          "left": 108,
+          "top": 188,
+          "right": 119,
+          "bottom": 203
+        },
+        {
+          "text": "number",
+          "confidence": 1.0,
+          "left": 122,
+          "top": 188,
+          "right": 160,
+          "bottom": 203
+        },
+        {
+          "text": "(EIN)",
+          "confidence": 1.0,
+          "left": 163,
+          "top": 188,
+          "right": 188,
+          "bottom": 203
+        },
+        {
+          "text": "145982.65",
+          "confidence": 1.0,
+          "left": 191,
+          "top": 188,
+          "right": 243,
+          "bottom": 203
+        },
+        {
+          "text": "9050.93",
+          "confidence": 1.0,
+          "left": 246,
+          "top": 188,
+          "right": 286,
+          "bottom": 203
+        },
+        {
+          "text": "57-0935917",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 228,
+          "right": 108,
+          "bottom": 243
+        },
+        {
+          "text": "5",
+          "confidence": 1.0,
+          "left": 111,
+          "top": 228,
+          "right": 117,
+          "bottom": 243
+        },
+        {
+          "text": "Medicare",
+          "confidence": 1.0,
+          "left": 120,
+          "top": 228,
+          "right": 166,
+          "bottom": 243
+        },
+        {
+          "text": "wages",
+          "confidence": 1.0,
+          "left": 169,
+          "top": 228,
+          "right": 201,
+          "bottom": 243
+        },
+        {
+          "text": "and",
+          "confidence": 1.0,
+          "left": 204,
+          "top": 228,
+          "right": 222,
+          "bottom": 243
+        },
+        {
+          "text": "tips",
+          "confidence": 1.0,
+          "left": 225,
+          "top": 228,
+          "right": 242,
+          "bottom": 243
+        },
+        {
+          "text": "161764.56",
+          "confidence": 1.0,
+          "left": 245,
+          "top": 228,
+          "right": 297,
+          "bottom": 243
+        },
+        {
+          "text": "6",
+          "confidence": 1.0,
+          "left": 300,
+          "top": 228,
+          "right": 306,
+          "bottom": 243
+        },
+        {
+          "text": "Medicare",
+          "confidence": 1.0,
+          "left": 309,
+          "top": 228,
+          "right": 355,
+          "bottom": 243
+        },
+        {
+          "text": "tax",
+          "confidence": 1.0,
+          "left": 358,
+          "top": 228,
+          "right": 372,
+          "bottom": 243
+        },
+        {
+          "text": "withheld",
+          "confidence": 1.0,
+          "left": 375,
+          "top": 228,
+          "right": 416,
+          "bottom": 243
+        },
+        {
+          "text": "2345.60",
+          "confidence": 1.0,
+          "left": 419,
+          "top": 228,
+          "right": 459,
+          "bottom": 243
+        },
+        {
+          "text": "c",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 288,
+          "right": 55,
+          "bottom": 303
+        },
+        {
+          "text": "Employer's",
+          "confidence": 1.0,
+          "left": 58,
+          "top": 288,
+          "right": 112,
+          "bottom": 303
+        },
+        {
+          "text": "name,",
+          "confidence": 1.0,
+          "left": 115,
+          "top": 288,
+          "right": 146,
+          "bottom": 303
+        },
+        {
+          "text": "address,",
+          "confidence": 1.0,
+          "left": 149,
+          "top": 288,
+          "right": 191,
+          "bottom": 303
+        },
+        {
+          "text": "and",
+          "confidence": 1.0,
+          "left": 194,
+          "top": 288,
+          "right": 212,
+          "bottom": 303
+        },
+        {
+          "text": "ZIP",
+          "confidence": 1.0,
+          "left": 215,
+          "top": 288,
+          "right": 233,
+          "bottom": 303
+        },
+        {
+          "text": "code",
+          "confidence": 1.0,
+          "left": 236,
+          "top": 288,
+          "right": 259,
+          "bottom": 303
+        },
+        {
+          "text": "UMA",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 328,
+          "right": 74,
+          "bottom": 343
+        },
+        {
+          "text": "Common",
+          "confidence": 1.0,
+          "left": 77,
+          "top": 328,
+          "right": 122,
+          "bottom": 343
+        },
+        {
+          "text": "Paymaster,",
+          "confidence": 1.0,
+          "left": 125,
+          "top": 328,
+          "right": 180,
+          "bottom": 343
+        },
+        {
+          "text": "1",
+          "confidence": 1.0,
+          "left": 183,
+          "top": 328,
+          "right": 189,
+          "bottom": 343
+        },
+        {
+          "text": "Poston",
+          "confidence": 1.0,
+          "left": 193,
+          "top": 328,
+          "right": 227,
+          "bottom": 343
+        },
+        {
+          "text": "Road,",
+          "confidence": 1.0,
+          "left": 230,
+          "top": 328,
+          "right": 259,
+          "bottom": 343
+        },
+        {
+          "text": "Suite",
+          "confidence": 1.0,
+          "left": 262,
+          "top": 328,
+          "right": 287,
+          "bottom": 343
+        },
+        {
+          "text": "350,",
+          "confidence": 1.0,
+          "left": 290,
+          "top": 328,
+          "right": 312,
+          "bottom": 343
+        },
+        {
+          "text": "Charleston,",
+          "confidence": 1.0,
+          "left": 315,
+          "top": 328,
+          "right": 371,
+          "bottom": 343
+        },
+        {
+          "text": "SC",
+          "confidence": 1.0,
+          "left": 374,
+          "top": 328,
+          "right": 389,
+          "bottom": 343
+        },
+        {
+          "text": "29407",
+          "confidence": 1.0,
+          "left": 392,
+          "top": 328,
+          "right": 423,
+          "bottom": 343
+        },
+        {
+          "text": "e",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 468,
+          "right": 56,
+          "bottom": 483
+        },
+        {
+          "text": "Employee's",
+          "confidence": 1.0,
+          "left": 59,
+          "top": 468,
+          "right": 115,
+          "bottom": 483
+        },
+        {
+          "text": "name,",
+          "confidence": 1.0,
+          "left": 118,
+          "top": 468,
+          "right": 149,
+          "bottom": 483
+        },
+        {
+          "text": "address,",
+          "confidence": 1.0,
+          "left": 152,
+          "top": 468,
+          "right": 194,
+          "bottom": 483
+        },
+        {
+          "text": "and",
+          "confidence": 1.0,
+          "left": 197,
+          "top": 468,
+          "right": 215,
+          "bottom": 483
+        },
+        {
+          "text": "ZIP",
+          "confidence": 1.0,
+          "left": 219,
+          "top": 468,
+          "right": 236,
+          "bottom": 483
+        },
+        {
+          "text": "code",
+          "confidence": 1.0,
+          "left": 239,
+          "top": 468,
+          "right": 263,
+          "bottom": 483
+        },
+        {
+          "text": "John",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 508,
+          "right": 73,
+          "bottom": 523
+        },
+        {
+          "text": "R",
+          "confidence": 1.0,
+          "left": 76,
+          "top": 508,
+          "right": 84,
+          "bottom": 523
+        },
+        {
+          "text": "Freedy,",
+          "confidence": 1.0,
+          "left": 87,
+          "top": 508,
+          "right": 125,
+          "bottom": 523
+        },
+        {
+          "text": "872",
+          "confidence": 1.0,
+          "left": 128,
+          "top": 508,
+          "right": 146,
+          "bottom": 523
+        },
+        {
+          "text": "Parrot",
+          "confidence": 1.0,
+          "left": 149,
+          "top": 508,
+          "right": 179,
+          "bottom": 523
+        },
+        {
+          "text": "Creek",
+          "confidence": 1.0,
+          "left": 182,
+          "top": 508,
+          "right": 212,
+          "bottom": 523
+        },
+        {
+          "text": "Way,",
+          "confidence": 1.0,
+          "left": 215,
+          "top": 508,
+          "right": 240,
+          "bottom": 523
+        },
+        {
+          "text": "CHARLESTON,",
+          "confidence": 1.0,
+          "left": 243,
+          "top": 508,
+          "right": 321,
+          "bottom": 523
+        },
+        {
+          "text": "SC",
+          "confidence": 1.0,
+          "left": 324,
+          "top": 508,
+          "right": 339,
+          "bottom": 523
+        },
+        {
+          "text": "29412",
+          "confidence": 1.0,
+          "left": 342,
+          "top": 508,
+          "right": 373,
+          "bottom": 523
+        },
+        {
+          "text": "12a",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 588,
+          "right": 68,
+          "bottom": 603
+        },
+        {
+          "text": "Code",
+          "confidence": 1.0,
+          "left": 71,
+          "top": 588,
+          "right": 97,
+          "bottom": 603
+        },
+        {
+          "text": "C",
+          "confidence": 1.0,
+          "left": 100,
+          "top": 588,
+          "right": 108,
+          "bottom": 603
+        },
+        {
+          "text": "1584.00",
+          "confidence": 1.0,
+          "left": 111,
+          "top": 588,
+          "right": 151,
+          "bottom": 603
+        },
+        {
+          "text": "13",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 628,
+          "right": 62,
+          "bottom": 643
+        },
+        {
+          "text": "Retirement",
+          "confidence": 1.0,
+          "left": 65,
+          "top": 628,
+          "right": 119,
+          "bottom": 643
+        },
+        {
+          "text": "plan",
+          "confidence": 1.0,
+          "left": 122,
+          "top": 628,
+          "right": 142,
+          "bottom": 643
+        },
+        {
+          "text": "X",
+          "confidence": 1.0,
+          "left": 145,
+          "top": 628,
+          "right": 153,
+          "bottom": 643
+        },
+        {
+          "text": "15",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 688,
+          "right": 62,
+          "bottom": 703
+        },
+        {
+          "text": "Employer's",
+          "confidence": 1.0,
+          "left": 65,
+          "top": 688,
+          "right": 119,
+          "bottom": 703
+        },
+        {
+          "text": "state",
+          "confidence": 1.0,
+          "left": 122,
+          "top": 688,
+          "right": 146,
+          "bottom": 703
+        },
+        {
+          "text": "ID",
+          "confidence": 1.0,
+          "left": 149,
+          "top": 688,
+          "right": 160,
+          "bottom": 703
+        },
+        {
+          "text": "number",
+          "confidence": 1.0,
+          "left": 163,
+          "top": 688,
+          "right": 200,
+          "bottom": 703
+        },
+        {
+          "text": "SC",
+          "confidence": 1.0,
+          "left": 203,
+          "top": 688,
+          "right": 218,
+          "bottom": 703
+        },
+        {
+          "text": "25285895-6",
+          "confidence": 1.0,
+          "left": 222,
+          "top": 688,
+          "right": 280,
+          "bottom": 703
+        },
+        {
+          "text": "16",
+          "confidence": 1.0,
+          "left": 283,
+          "top": 688,
+          "right": 296,
+          "bottom": 703
+        },
+        {
+          "text": "State",
+          "confidence": 1.0,
+          "left": 299,
+          "top": 688,
+          "right": 324,
+          "bottom": 703
+        },
+        {
+          "text": "wages,",
+          "confidence": 1.0,
+          "left": 327,
+          "top": 688,
+          "right": 362,
+          "bottom": 703
+        },
+        {
+          "text": "tips,",
+          "confidence": 1.0,
+          "left": 365,
+          "top": 688,
+          "right": 385,
+          "bottom": 703
+        },
+        {
+          "text": "etc.",
+          "confidence": 1.0,
+          "left": 388,
+          "top": 688,
+          "right": 406,
+          "bottom": 703
+        },
+        {
+          "text": "161764.56",
+          "confidence": 1.0,
+          "left": 409,
+          "top": 688,
+          "right": 461,
+          "bottom": 703
+        },
+        {
+          "text": "17",
+          "confidence": 1.0,
+          "left": 464,
+          "top": 688,
+          "right": 477,
+          "bottom": 703
+        },
+        {
+          "text": "State",
+          "confidence": 1.0,
+          "left": 480,
+          "top": 688,
+          "right": 505,
+          "bottom": 703
+        },
+        {
+          "text": "income",
+          "confidence": 1.0,
+          "left": 508,
+          "top": 688,
+          "right": 544,
+          "bottom": 703
+        },
+        {
+          "text": "tax",
+          "confidence": 1.0,
+          "left": 547,
+          "top": 688,
+          "right": 562,
+          "bottom": 703
+        },
+        {
+          "text": "7170.09",
+          "confidence": 1.0,
+          "left": 565,
+          "top": 688,
+          "right": 604,
+          "bottom": 703
+        },
+        {
+          "text": "Form",
+          "confidence": 1.0,
+          "left": 50,
+          "top": 788,
+          "right": 75,
+          "bottom": 803
+        },
+        {
+          "text": "W-2",
+          "confidence": 1.0,
+          "left": 78,
+          "top": 788,
+          "right": 98,
+          "bottom": 803
+        },
+        {
+          "text": "Wage",
+          "confidence": 1.0,
+          "left": 101,
+          "top": 788,
+          "right": 130,
+          "bottom": 803
+        },
+        {
+          "text": "and",
+          "confidence": 1.0,
+          "left": 133,
+          "top": 788,
+          "right": 152,
+          "bottom": 803
+        },
+        {
+          "text": "Tax",
+          "confidence": 1.0,
+          "left": 155,
+          "top": 788,
+          "right": 173,
+          "bottom": 803
+        },
+        {
+          "text": "Statement",
+          "confidence": 1.0,
+          "left": 176,
+          "top": 788,
+          "right": 226,
+          "bottom": 803
+        },
+        {
+          "text": "2024",
+          "confidence": 1.0,
+          "left": 229,
+          "top": 788,
+          "right": 254,
+          "bottom": 803
+        },
+        {
+          "text": "a",
+          "confidence": 1.0,
+          "left": 900,
+          "top": 88,
+          "right": 906,
+          "bottom": 103
+        },
+        {
+          "text": "Employee's",
+          "confidence": 1.0,
+          "left": 909,
+          "top": 88,
+          "right": 965,
+          "bottom": 103
+        },
+        {
+          "text": "soc.",
+          "confidence": 1.0,
+          "left": 968,
+          "top": 88,
+          "right": 988,
+          "bottom": 103
+        },
+        {
+          "text": "sec.",
+          "confidence": 1.0,
+          "left": 991,
+          "top": 88,
+          "right": 1012,
+          "bottom": 103
+        },
+        {
+          "text": "no.",
+          "confidence": 1.0,
+          "left": 1015,
+          "top": 88,
+          "right": 1030,
+          "bottom": 103
+        },
+        {
+          "text": "1",
+          "confidence": 1.0,
+          "left": 1033,
+          "top": 88,
+          "right": 1039,
+          "bottom": 103
+        },
+        {
+          "text": "Wages,",
+          "confidence": 1.0,
+          "left": 1042,
+          "top": 88,
+          "right": 1080,
+          "bottom": 103
+        },
+        {
+          "text": "tips,",
+          "confidence": 1.0,
+          "left": 1083,
+          "top": 88,
+          "right": 1103,
+          "bottom": 103
+        },
+        {
+          "text": "other",
+          "confidence": 1.0,
+          "left": 1106,
+          "top": 88,
+          "right": 1131,
+          "bottom": 103
+        },
+        {
+          "text": "comp.",
+          "confidence": 1.0,
+          "left": 1134,
+          "top": 88,
+          "right": 1164,
+          "bottom": 103
+        },
+        {
+          "text": "2",
+          "confidence": 1.0,
+          "left": 1167,
+          "top": 88,
+          "right": 1173,
+          "bottom": 103
+        },
+        {
+          "text": "Federal",
+          "confidence": 1.0,
+          "left": 1176,
+          "top": 88,
+          "right": 1213,
+          "bottom": 103
+        },
+        {
+          "text": "income",
+          "confidence": 1.0,
+          "left": 1216,
+          "top": 88,
+          "right": 1252,
+          "bottom": 103
+        },
+        {
+          "text": "tax",
+          "confidence": 1.0,
+          "left": 1255,
+          "top": 88,
+          "right": 1270,
+          "bottom": 103
+        },
+        {
+          "text": "withheld",
+          "confidence": 1.0,
+          "left": 1273,
+          "top": 88,
+          "right": 1313,
+          "bottom": 103
+        },
+        {
+          "text": "XXX-XX-7190",
+          "confidence": 1.0,
+          "left": 900,
+          "top": 128,
+          "right": 968,
+          "bottom": 143
+        },
+        {
+          "text": "3",
+          "confidence": 1.0,
+          "left": 971,
+          "top": 128,
+          "right": 977,
+          "bottom": 143
+        },
+        {
+          "text": "Social",
+          "confidence": 1.0,
+          "left": 980,
+          "top": 128,
+          "right": 1010,
+          "bottom": 143
+        },
+        {
+          "text": "security",
+          "confidence": 1.0,
+          "left": 1013,
+          "top": 128,
+          "right": 1051,
+          "bottom": 143
+        },
+        {
+          "text": "wages",
+          "confidence": 1.0,
+          "left": 1054,
+          "top": 128,
+          "right": 1086,
+          "bottom": 143
+        },
+        {
+          "text": "161764.56",
+          "confidence": 1.0,
+          "left": 1089,
+          "top": 128,
+          "right": 1141,
+          "bottom": 143
+        },
+        {
+          "text": "4",
+          "confidence": 1.0,
+          "left": 1144,
+          "top": 128,
+          "right": 1150,
+          "bottom": 143
+        },
+        {
+          "text": "Social",
+          "confidence": 1.0,
+          "left": 1153,
+          "top": 128,
+          "right": 1183,
+          "bottom": 143
+        },
+        {
+          "text": "security",
+          "confidence": 1.0,
+          "left": 1186,
+          "top": 128,
+          "right": 1224,
+          "bottom": 143
+        },
+        {
+          "text": "tax",
+          "confidence": 1.0,
+          "left": 1227,
+          "top": 128,
+          "right": 1242,
+          "bottom": 143
+        },
+        {
+          "text": "withheld",
+          "confidence": 1.0,
+          "left": 1245,
+          "top": 128,
+          "right": 1285,
+          "bottom": 143
+        },
+        {
+          "text": "20465.79",
+          "confidence": 1.0,
+          "left": 1288,
+          "top": 128,
+          "right": 1334,
+          "bottom": 143
+        }
+      ],
+      "layout_regions": []
+    }
+  ],
+  "kie_pairs": [
+    {
+      "field_key": "Year",
+      "label": "Form W-2",
+      "value": "2024",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "Employee's social security number",
+      "label": "Employee's social security number",
+      "value": "XXX-XX-7190",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "Employer identification number (EIN)",
+      "label": "Employer ID number",
+      "value": "57-0935917",
+      "confidence": 0.85,
+      "method": "spatial"
+    },
+    {
+      "field_key": "Control number",
+      "label": "Control number",
+      "value": "Employer",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "1 Wages, tips, other compensation",
+      "label": "Wages, tips, other compensation",
+      "value": "161764.56",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "2 Federal income tax withheld",
+      "label": "Federal income tax withheld",
+      "value": "20465.79",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "3 Social security wages",
+      "label": "Social security wages",
+      "value": "1584.00",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "4 Social security tax withheld",
+      "label": "Social security tax withheld",
+      "value": "2345.60",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "6 Medicare tax withheld",
+      "label": "Medicare tax withheld",
+      "value": "7170.09",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "10 Dependent care benefits",
+      "label": "Dependent care benefits",
+      "value": "145982.65",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "12a Code/Amount",
+      "label": "12a",
+      "value": "Employee's",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "12b Code/Amount",
+      "label": "12b",
+      "value": "Wages,",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "12c Code/Amount",
+      "label": "12c",
+      "value": "Federal",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "12d Code/Amount",
+      "label": "12d",
+      "value": "Poston",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "13 Statutory employee",
+      "label": "Statutory employee",
+      "value": "Freedy,",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "13 Retirement plan",
+      "label": "Retirement plan",
+      "value": "plan",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "13 Third-party sick pay",
+      "label": "Third-party sick pay",
+      "value": "Employer's",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "14 Other",
+      "label": "14 Other",
+      "value": "comp.",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "15 State / Employer's state ID number",
+      "label": "Employer's state ID number",
+      "value": "ID",
+      "confidence": 0.92,
+      "method": "spatial"
+    },
+    {
+      "field_key": "20 Locality name",
+      "label": "Locality name",
+      "value": "address,",
+      "confidence": 0.92,
+      "method": "spatial"
+    }
+  ]
+}

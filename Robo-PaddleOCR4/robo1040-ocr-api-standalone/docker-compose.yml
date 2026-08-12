@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ocr-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: robo1040-ocr-api
+    ports:
+      - "8010:8000"
+    environment:
+      - API_KEY=robo1040
+      - USE_DIGITAL_PDF=true
+      - USE_PP_STRUCTURE=true
+      - USE_KIE=true
+      - USE_PADDLEOCR_VL=true
+      - USE_SCHEMA_EXTRACT=true
+    volumes:
+      - ./models:/app/models
+      - ./training:/app/training
+    restart: unless-stopped
